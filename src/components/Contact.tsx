@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,10 +13,8 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // In a real application, you would send the form data to a server
-    console.log({ email, name, message });
-    
-    // Show success message
+    // Netlify will handle the form submission automatically
+    // We just need to show the success message and clear the form
     toast({
       title: "Message sent!",
       description: "We'll get back to you as soon as possible.",
@@ -50,7 +47,7 @@ const Contact = () => {
                 <span className="font-normal">Phone:</span> (555) 123-4567
               </p>
               <p className="text-gray-600">
-                <span className="font-normal">Email:</span> info@artisandoors.com
+                <span className="font-normal">Email:</span> askordoors@gmail.com
               </p>
               <p className="text-gray-600">
                 <span className="font-normal">Hours:</span> Monday-Friday: 9am-5pm
@@ -65,10 +62,21 @@ const Contact = () => {
           </div>
           
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form 
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
+              
               <div>
                 <Input
                   id="name"
+                  name="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your name"
@@ -80,6 +88,7 @@ const Contact = () => {
               <div>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -92,6 +101,7 @@ const Contact = () => {
               <div>
                 <Textarea
                   id="message"
+                  name="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Your message"
