@@ -1,4 +1,3 @@
-
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
@@ -66,7 +65,7 @@ const Index = () => {
           <div className="container-custom max-w-6xl">
             <div className="aspect-w-16 aspect-h-9">
               <img 
-                src="https://images.unsplash.com/photo-1616177635753-920dee141885?q=80&w=1000" 
+                src="/images/1.png" 
                 alt="Custom door craftsmanship" 
                 className="w-full h-auto object-cover"
               />

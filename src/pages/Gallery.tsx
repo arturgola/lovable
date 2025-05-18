@@ -1,4 +1,3 @@
-
 import { useTranslation } from "react-i18next";
 import ImageGallery from "@/components/ImageGallery";
 import Navbar from "@/components/Navbar";
@@ -10,32 +9,32 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1619732130055-5dc2576e7456",
+      src: "/images/2.png",
       alt: "Custom wooden door with glass panels",
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1533779164707-c72e6109449d",
+      src: "/images/2.png",
       alt: "Modern entrance door",
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1613346945084-35cccc812dd5",
+      src: "/images/2.png",
       alt: "Rustic wooden door",
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1618856377091-38c92e44ecdf",
+      src: "/images/2.png",
       alt: "Black front door",
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1527801779725-f761193fea0a",
+      src: "/images/2.png",
       alt: "Decorative wooden door",
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1516248424560-7c420abf9bcf",
+      src: "/images/2.png",
       alt: "Colorful door",
     },
   ];
