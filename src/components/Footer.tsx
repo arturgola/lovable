@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="font-medium mb-4">Door Gallery</h3>
+            <h3 className="font-medium mb-4">Askordoors</h3>
             <p className="text-sm text-muted-foreground max-w-xs">
               info@doorgallery.com
             </p>
@@ -61,7 +61,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Door Gallery. {t('rightsReserved')}.
+            © {currentYear} Askordoors. {t('rightsReserved')}.
           </p>
         </div>
       </div>

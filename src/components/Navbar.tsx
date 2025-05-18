@@ -33,7 +33,7 @@ const Navbar = () => {
         {/* Logo */}
         <div>
           <Link to="/" className="text-lg font-medium tracking-tight">
-            Door Gallery
+          Askordoors
           </Link>
         </div>
 
@@ -89,7 +89,7 @@ const Navbar = () => {
               <div className="container-custom flex justify-between items-center py-4">
                 <div>
                   <Link to="/" className="text-lg font-medium tracking-tight" onClick={closeMenu}>
-                    Door Gallery
+                  Askordoors
                   </Link>
                 </div>
                 <Button variant="ghost" size="icon" onClick={closeMenu}>
