@@ -1,4 +1,3 @@
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -14,6 +13,8 @@ const resources = {
       aboutTitle: 'Kvaliteetsed eritellimusel uksed',
       aboutDescription: 'Oleme pühendunud kõrgekvaliteetsete eritellimusel uste valmistamisele. Meie uksed on valmistatud parimatest materjalidest ja valmistatud kogenud meistrite poolt.',
       learnMore: 'Loe rohkem',
+      artistPlatform: 'Me tahame pakkuda kunstnikele platvormi, kus nad saaksid end maailmale näidata. Meie kogu sisaldab kaasaegset mööblit, keraamikat, skulptuure ja disaini. Disainerid ulatuvad tunnustatud meistritest kuni tekkivate talentideni, kusjuures igaühel on oma eripärane lähenemine või stiil, mis on mingil viisil ainulaadne.',
+      uniqueMaterials: 'Unikaalsete ja eriliste materjalide kasutamisega, mis suudavad muuta mitmekesiseid interjööre ja stiile, püüavad meie disainid peegeldada kunstiliste päritolude ja oskuste mitmekesisust pidevalt muutuvas ja arenevas ruumis.',
       
       // Gallery
       galleryTitle: 'Meie tööd',
@@ -59,6 +60,8 @@ const resources = {
       aboutTitle: 'Quality Custom Doors',
       aboutDescription: 'We are dedicated to creating high-quality custom doors. Our doors are made from the finest materials and crafted by experienced artisans.',
       learnMore: 'Learn more',
+      artistPlatform: 'We want to provide artists a platform to show off to the world. Our collection includes contemporary work in furniture, ceramics, sculpture, and design. The designers range from well-known masters to emerging talents, each with their distinctive approach or style that is uniqueically unique in some manner.',
+      uniqueMaterials: 'With the use of unique and special materials that can turn diverse interiors and styles, our designs aim to reflect the diversity of artistic origins and skills in a constantly changing and evolving space.',
       
       // Gallery
       galleryTitle: 'Our Work',

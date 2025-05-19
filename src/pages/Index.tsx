@@ -42,14 +42,14 @@ const Index = () => {
                 <div className="space-y-6 mb-12">
                   <p className="text-sm">(02)</p>
                   <p className="text-base text-muted-foreground">
-                    We want to provide artists a platform to show off to the world. Our collection includes contemporary work in furniture, ceramics, sculpture, and design. The designers range from well-known masters to emerging talents, each with their distinctive approach or style that is uniqueically unique in some manner.
+                    {t('artistPlatform')}
                   </p>
                 </div>
 
                 <div className="space-y-6 mb-12">
                   <p className="text-sm">(03)</p>
                   <p className="text-base text-muted-foreground">
-                    With the use of unique and special materials that can turn diverse interiors and styles, our designs aim to reflect the diversity of artistic origins and skills in a constantly changing and evolving space.
+                    {t('uniqueMaterials')}
                   </p>
                 </div>
               </div>
@@ -63,12 +63,14 @@ const Index = () => {
         {/* Image Section */}
         <section className="pb-16 md:pb-24">
           <div className="container-custom max-w-6xl">
-            <div className="aspect-w-16 aspect-h-9">
-              <img 
-                src="/images/1.png" 
-                alt="Custom door craftsmanship" 
-                className="w-full h-auto object-cover"
-              />
+            <div className="flex justify-center">
+              <div className="w-full max-w-2xl aspect-w-16 aspect-h-9">
+                <img 
+                  src="/images/1.png" 
+                  alt="Custom door craftsmanship" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
