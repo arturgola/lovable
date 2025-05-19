@@ -10,7 +10,7 @@ const resources = {
       contact: 'Kontakt',
       
       // Main page
-      aboutTitle: 'Kvaliteetsed eritellimusel uksed',
+      aboutTitle: 'Eritellimusel uksed',
       aboutDescription: 'Oleme pühendunud kõrgekvaliteetsete eritellimusel uste valmistamisele. Meie uksed on valmistatud parimatest materjalidest ja valmistatud kogenud meistrite poolt.',
       learnMore: 'Loe rohkem',
       artistPlatform: 'Me tahame pakkuda kunstnikele platvormi, kus nad saaksid end maailmale näidata. Meie kogu sisaldab kaasaegset mööblit, keraamikat, skulptuure ja disaini. Disainerid ulatuvad tunnustatud meistritest kuni tekkivate talentideni, kusjuures igaühel on oma eripärane lähenemine või stiil, mis on mingil viisil ainulaadne.',
@@ -52,7 +52,7 @@ const resources = {
   en: {
     translation: {
       // Navigation
-      mainPage: 'Main Page',
+      mainPage: 'Home',
       gallery: 'Gallery',
       contact: 'Contact',
       

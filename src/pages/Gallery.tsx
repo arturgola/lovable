@@ -54,7 +54,9 @@ const Gallery = () => {
             </p>
           </div>
 
-          <ImageGallery images={galleryImages} />
+          <div className="w-full">
+            <ImageGallery images={galleryImages} />
+          </div>
         </div>
       </main>
 

@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
 
 const Index = () => {
   const { t } = useTranslation();
@@ -13,61 +12,54 @@ const Index = () => {
       <Navbar />
 
       <main className="flex-1">
-        {/* Hero Section - Minimalist Layout */}
+        {/* Hero Section */}
         <section className="py-16 md:py-24">
-          <div className="container-custom max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-              {/* Left Column - Empty Space */}
-              <div className="lg:col-span-3">
-                <div className="mb-6">
-                  <p className="text-sm text-muted-foreground">info@doorgallery.com</p>
-                </div>
-                <div className="mb-6">
-                  <p className="text-sm text-muted-foreground">(01)</p>
-                </div>
-              </div>
+          <div className="container-custom max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm">(A)</p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight">
+                {t("aboutTitle")}
+              </h1>
+            </div>
 
-              {/* Middle Column - Main Content */}
-              <div className="lg:col-span-6">
-                <div className="space-y-6 mb-12">
-                  <p className="text-sm text-center">(A)</p>
-                  <h1 className="text-3xl md:text-4xl font-normal tracking-tight text-center">
-                    {t('aboutTitle')}
-                  </h1>
+            {/* Aligned Description Section */}
+            <div className="max-w-5xl mx-auto space-y-12">
+              <div className="flex justify-center">
+                <div className="flex gap-6 max-w-4xl">
+                  <p className="text-sm w-12 text-right flex-shrink-0">(01)</p>
                   <p className="text-base text-muted-foreground">
                     {t('aboutDescription')}
                   </p>
                 </div>
-
-                <div className="space-y-6 mb-12">
-                  <p className="text-sm">(02)</p>
+              </div>
+              <div className="flex justify-center">
+                <div className="flex gap-6 max-w-4xl">
+                  <p className="text-sm w-12 text-right flex-shrink-0">(02)</p>
                   <p className="text-base text-muted-foreground">
                     {t('artistPlatform')}
                   </p>
                 </div>
-
-                <div className="space-y-6 mb-12">
-                  <p className="text-sm">(03)</p>
+              </div>
+              <div className="flex justify-center">
+                <div className="flex gap-6 max-w-4xl">
+                  <p className="text-sm w-12 text-right flex-shrink-0">(03)</p>
                   <p className="text-base text-muted-foreground">
                     {t('uniqueMaterials')}
                   </p>
                 </div>
               </div>
-
-              {/* Right Column - Empty Space */}
-              <div className="lg:col-span-3"></div>
             </div>
           </div>
         </section>
 
         {/* Image Section */}
-        <section className="pb-16 md:pb-24">
-          <div className="container-custom max-w-6xl">
-            <div className="flex justify-center">
-              <div className="w-full max-w-2xl aspect-w-16 aspect-h-9">
+        <section className="pb-8 md:pb-12">
+          <div className="container-custom max-w-6xl mx-auto">
+            <div className="max-w-4xl mx-auto">
+              <div className="aspect-w-16 aspect-h-9">
                 <img 
                   src="/images/1.png" 
-                  alt="Custom door craftsmanship" 
+                  alt="Design gallery interior" 
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -75,20 +67,23 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Contact Form Section */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container-custom max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-              {/* Left Column */}
-              <div className="lg:col-span-6">
-                <h2 className="text-2xl md:text-3xl font-normal tracking-tight mb-6">
-                  {t('contactTitle')}
-                </h2>
-              </div>
+        {/* Contact Form */}
+        <section className="py-12 md:py-16 bg-background">
+          <div className="container-custom">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="pt-8 md:pt-12">
+                  <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-4">
+                    {t('contactTitle')}
+                  </h2>
+                  <p className="text-lg text-muted-foreground">
+                    {t('contactDescription')}
+                  </p>
+                </div>
 
-              {/* Right Column */}
-              <div className="lg:col-span-6">
-                <ContactForm />
+                <div className="bg-background p-6 md:p-8 rounded-md border border-border">
+                  <ContactForm />
+                </div>
               </div>
             </div>
           </div>

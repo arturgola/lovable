@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useTranslation } from "react-i18next";
@@ -35,7 +34,7 @@ const ImageGallery = ({ images }: GalleryProps) => {
   }));
 
   return (
-    <>
+    <div className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {images.map((image, i) => (
           <div 
@@ -61,7 +60,7 @@ const ImageGallery = ({ images }: GalleryProps) => {
         slides={lightboxImages}
         styles={{ container: { backgroundColor: "rgba(0, 0, 0, 0.9)" } }}
       />
-    </>
+    </div>
   );
 };
 

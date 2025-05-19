@@ -14,13 +14,13 @@ const Footer = () => {
           <div>
             <h3 className="font-medium mb-4">Askordoors</h3>
             <p className="text-sm text-muted-foreground max-w-xs">
-              info@doorgallery.com
+                askordoors@gmail.com
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-medium mb-4">{t('mainPage')}</h3>
+            {/* <h3 className="font-medium mb-4">{t('mainPage')}</h3> */}
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
 
           {/* Legal */}
-          <div>
+          {/* <div>
             <h3 className="font-medium mb-4">{t('contact')}</h3>
             <ul className="space-y-2">
               <li>
@@ -55,7 +55,7 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Copyright */}
