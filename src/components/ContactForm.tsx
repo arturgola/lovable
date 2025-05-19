@@ -1,11 +1,9 @@
-
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 
 interface FormValues {
   name: string;
@@ -62,21 +60,40 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Netlify forms will automatically collect submissions from this form
-      // We just need to make sure the name, data-netlify and netlify attributes are set
-      toast({
-        title: t('formSuccess'),
-        description: '',
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+      
+      // Add the form-name field required by Netlify
+      formData.append('form-name', 'contact');
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
       });
 
-      // Reset form values
-      setValues({
-        name: '',
-        email: '',
-        message: '',
-      });
+      if (response.ok) {
+        toast({
+          title: t('formSuccess'),
+          description: '',
+        });
+
+        // Reset form values
+        setValues({
+          name: '',
+          email: '',
+          message: '',
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       console.error('Form submission error:', error);
+      toast({
+        title: 'Error',
+        description: 'There was an error submitting the form. Please try again.',
+        variant: 'destructive',
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -87,12 +104,13 @@ const ContactForm = () => {
       name="contact" 
       method="POST" 
       data-netlify="true"
+      netlify-honeypot="bot-field"
       className="space-y-4"
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
-      <input type="hidden" name="recipient" value="askordoors@gmail.com" />
-
+      <input type="hidden" name="bot-field" />
+      
       <div>
         <Input
           id="name"
