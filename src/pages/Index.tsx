@@ -71,8 +71,7 @@ const Index = () => {
             <div className="relative mb-4">
               <div className="aspect-[16/10] bg-gray-100 rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=800&fit=crop" 
-                  alt="Natural wood furniture collection" 
+                  src="/images/3.png" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -106,8 +105,7 @@ const Index = () => {
               <div>
                 <div className="aspect-[16/10] md:aspect-[16/10] bg-gray-100 rounded-2xl md:rounded-2xl overflow-hidden max-w-[92%] md:max-w-[85%] mx-auto">
                   <img 
-                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop" 
-                    alt="Wood furniture piece 1"
+                    src="/images/5.png"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -120,8 +118,7 @@ const Index = () => {
               <div>
                 <div className="aspect-[16/10] md:aspect-[16/10] bg-gray-100 rounded-2xl md:rounded-2xl overflow-hidden max-w-[92%] md:max-w-[85%] mx-auto">
                   <img 
-                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=400&fit=crop" 
-                    alt="Wood furniture piece 2"
+                    src="/images/5.png"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -134,8 +131,7 @@ const Index = () => {
               <div>
                 <div className="aspect-[16/10] md:aspect-[16/10] bg-gray-100 rounded-2xl md:rounded-2xl overflow-hidden max-w-[92%] md:max-w-[85%] mx-auto">
                   <img 
-                    src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400&h=400&fit=crop" 
-                    alt="Wood furniture piece 3"
+                    src="/images/5.png"
                     className="w-full h-full object-cover"
                   />
                 </div>
