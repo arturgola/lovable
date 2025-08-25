@@ -9,10 +9,10 @@ const Footer = () => {
   return (
     <footer className="border-t border-border py-8 bg-background">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {/* Company Info */}
           <div>
-             <h2 className="font-medium mb-2">Askordoors OÜ</h2> 
+             <h2 className="font-medium mb-2 text-sm">Askordoors OÜ</h2> 
             <p className="text-sm text-muted-foreground max-w-xs mb-2">
                 askordoors@gmail.com
             </p>

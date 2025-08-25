@@ -163,6 +163,13 @@ const Index = () => {
                   <ContactForm />
                 </div>
               </div>
+              
+              {/* Phone consultation note outside the form box */}
+              <div className="mt-4 ml-auto max-w-md">
+                <p className="text-sm text-muted-foreground text-right">
+                  Feel free to reach out directly by phone for consultation. <a href="tel:+37256254169" className="font-bold text-foreground hover:underline">+37256254169</a>
+                </p>
+              </div>
             </div>
           </div>
         </section>
