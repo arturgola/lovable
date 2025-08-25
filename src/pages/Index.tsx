@@ -52,15 +52,87 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Image Section */}
-        <section className="pb-8 md:pb-12">
-          <div className="container-custom max-w-6xl mx-auto">
-            <div className="max-w-4xl mx-auto">
-              <div className="aspect-w-16 aspect-h-9">
+        {/* Main Product Image */}
+        <section className="py-10 md:py-2 bg-white">
+          <div className="container-custom max-w-7xl mx-auto px-4">
+            {/* Text above image (from Index copy) */}
+            <div className="text-center mb-8">
+              <div className="flex justify-between items-center max-w-4xl mx-auto">
+                <p className="text-sm text-gray-600 max-w-xs text-left">
+                  Discover eco-friendly furniture for modern living, crafted with nature in mind
+                </p>
+                <div className="text-right">
+                  <p className="text-xs text-gray-500 uppercase tracking-wider">ECO-FRIENDLY BRAND</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative mb-8">
+              <div className="aspect-[16/10] bg-gray-100 rounded-2xl overflow-hidden">
                 <img 
-                  src="/images/1.png" 
-                  alt="Design gallery interior" 
-                  className="w-full h-auto object-cover"
+                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=800&fit=crop" 
+                  alt="Natural wood furniture collection" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              <div className="absolute bottom-6 right-6 flex gap-4">
+                <Button variant="outline" className="bg-white/90 backdrop-blur-sm border-gray-200 text-black px-4 py-2 rounded-full text-xs">
+                  GALLERY →
+                </Button>
+                <Button variant="outline" className="bg-white/90 backdrop-blur-sm border-gray-200 text-black px-4 py-2 rounded-full text-xs">
+                  CONTACT →
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Values Section */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container-custom max-w-6xl mx-auto px-4">
+            <div className="text-center mb-10">
+              <h2 className="text-sm text-gray-500 mb-4">Furniture with Value</h2>
+              <h3 className="text-4xl md:text-5xl font-light text-black">Designed with Purpose</h3>
+            </div>
+
+            {/* Three Columns */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+              <div className="text-center">
+                <p className="text-xs text-gray-400 mb-4">01</p>
+                <h4 className="text-lg font-medium mb-4">Crafted for Durability, Priced for Accessibility</h4>
+              </div>
+              <div className="text-center">
+                <p className="text-xs text-gray-400 mb-4">02</p>
+                <h4 className="text-lg font-medium mb-4">Sustainable Practices Through Repurposing</h4>
+              </div>
+              <div className="text-center">
+                <p className="text-xs text-gray-400 mb-4">03</p>
+                <h4 className="text-lg font-medium mb-4">Collaborate with eco focused communities</h4>
+              </div>
+            </div>
+
+            {/* Product Showcase Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop" 
+                  alt="Wood furniture piece 1"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=400&fit=crop" 
+                  alt="Wood furniture piece 2"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400&h=400&fit=crop" 
+                  alt="Wood furniture piece 3"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -68,11 +140,11 @@ const Index = () => {
         </section>
 
         {/* Contact Form */}
-        <section className="py-12 md:py-16 bg-background">
+        <section className="py-10 md:py-14 bg-background">
           <div className="container-custom">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="pt-8 md:pt-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="pt-6 md:pt-8">
                   <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-4">
                     {t('contactTitle')}
                   </h2>
