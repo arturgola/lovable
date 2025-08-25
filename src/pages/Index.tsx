@@ -54,7 +54,7 @@ const Index = () => {
         </section>
 
         {/* Main Product Image */}
-        <section className="py-8 md:py-2 bg-white">
+        <section className="py-8 md:py-14 bg-white">
           <div className="container-custom max-w-7xl mx-auto px-4">
             {/* Text above image (from Index copy) */}
             <div className="text-center mb-8">
@@ -96,12 +96,10 @@ const Index = () => {
         {/* Values Section */}
         <section className="pt-6 md:pt-12 pb-10 md:pb-24 bg-white">
           <div className="container-custom max-w-6xl mx-auto px-4">
-            <div className="text-center mb-10">
-              <h2 className="text-sm text-gray-500 mb-4">Furniture with Value</h2>
-              <h3 className="text-4xl md:text-5xl font-light text-black">Designed with Purpose</h3>
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-sm text-gray-500">Furniture with Value</h2>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight">Designed with Purpose</h3>
             </div>
-
-            {/* Three Columns combined into per-card descriptions for all breakpoints */}
 
             {/* Product Showcase Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -116,7 +114,7 @@ const Index = () => {
                 {/* Description under image 1 */}
                 <div className="text-center mt-3">
                   <p className="text-xs text-gray-400 mb-2">01</p>
-                  <h4 className="text-base md:text-lg font-medium">Crafted for Durability, Priced for Accessibility</h4>
+                  <p className="text-base text-muted-foreground">Crafted for Durability, Priced for Accessibility</p>
                 </div>
               </div>
               <div>
@@ -130,7 +128,7 @@ const Index = () => {
                 {/* Description under image 2 */}
                 <div className="text-center mt-3">
                   <p className="text-xs text-gray-400 mb-2">02</p>
-                  <h4 className="text-base md:text-lg font-medium">Sustainable Practices Through Repurposing</h4>
+                  <p className="text-base text-muted-foreground">Sustainable Practices Through Repurposing</p>
                 </div>
               </div>
               <div>
@@ -144,7 +142,7 @@ const Index = () => {
                 {/* Description under image 3 */}
                 <div className="text-center mt-3">
                   <p className="text-xs text-gray-400 mb-2">03</p>
-                  <h4 className="text-base md:text-lg font-medium">Collaborate with eco focused communities</h4>
+                  <p className="text-base text-muted-foreground">Collaborate with eco focused communities</p>
                 </div>
               </div>
             </div>
