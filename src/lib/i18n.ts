@@ -72,11 +72,11 @@ const resources = {
       contact: 'Contact',
       
       // Main page
-      aboutTitle: 'Quality Custom Doors',
-      aboutDescription: 'We are dedicated to creating high-quality custom doors. Our doors are made from the finest materials and crafted by experienced artisans.',
+      aboutTitle: 'Askordoors OÜ',
+      aboutDescription: 'We manufacture and install high-quality custom-made doors. Our products are crafted from the finest materials available and by the hands of experienced craftsmen.',
       learnMore: 'Learn more',
-      artistPlatform: 'We want to provide artists a platform to show off to the world. Our collection includes contemporary work in furniture, ceramics, sculpture, and design. The designers range from well-known masters to emerging talents, each with their distinctive approach or style that is uniqueically unique in some manner.',
-      uniqueMaterials: 'With the use of unique and special materials that can turn diverse interiors and styles, our designs aim to reflect the diversity of artistic origins and skills in a constantly changing and evolving space.',
+      artistPlatform: '<strong>We offer a wide range of doors</strong>: exterior doors for houses, exterior doors for apartments, exterior doors for apartment buildings, exterior doors with side panels, heritage conservation doors, exterior doors for buildings of historical or environmental value, double-leaf doors and much more',
+      uniqueMaterials: 'All doors are made according to your wishes – you can send us a photo (e.g., of an existing door), a link from the internet, or simply a description of the desired door type. <strong>Delivery time is 3–5 weeks after a 50% prepayment</strong>.',
       
       // Gallery
       galleryTitle: 'Our Work',

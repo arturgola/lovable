@@ -37,7 +37,7 @@ const Index = () => {
                 <div className="flex gap-4 md:gap-6 max-w-4xl">
                   <p className="text-sm w-12 text-right flex-shrink-0">{t('section02')}</p>
                   <p className="text-base text-muted-foreground">
-                    {t('artistPlatform')}
+                    <span dangerouslySetInnerHTML={{ __html: t('artistPlatform') }} />
                   </p>
                 </div>
               </div>
@@ -45,7 +45,7 @@ const Index = () => {
                 <div className="flex gap-4 md:gap-6 max-w-4xl">
                   <p className="text-sm w-12 text-right flex-shrink-0">{t('section03')}</p>
                   <p className="text-base text-muted-foreground">
-                    {t('uniqueMaterials')}
+                    <span dangerouslySetInnerHTML={{ __html: t('uniqueMaterials') }} />
                   </p>
                 </div>
               </div>
