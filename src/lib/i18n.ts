@@ -47,6 +47,21 @@ const resources = {
 
       // Language selection
       language: 'Keel',
+
+      // New translations from Index.tsx
+      sectionA: '(A)',
+      furnitureWithValue: 'Mööbel väärtusega',
+      designedWithPurpose: 'Disainitud eesmärgiga',
+      ecoFriendlyDescription: 'Avasta keskkonnasõbralik mööbel kaasaegseks eluks, loodud looduse mõtlemisega',
+      ecoFriendlyBrand: 'KESKKONNASÕBRALIK BRÄND',
+      galleryButton: 'GALERII →',
+      contactButton: 'KONTAKT →',
+      craftedForDurability: 'Loodud vastupidavuseks, hinnatud kättesaadavuseks',
+      sustainablePractices: 'Jätkusuutlikud praktikad ümberkasutamise kaudu',
+      collaborateWithCommunities: 'Koostöö keskkonnahuviliste kogukondadega',
+      section01: '01',
+      section02: '02',
+      section03: '03',
     }
   },
   en: {
@@ -94,6 +109,21 @@ const resources = {
 
       // Language selection
       language: 'Language',
+
+      // New translations from Index.tsx
+      sectionA: '(A)',
+      furnitureWithValue: 'Furniture with Value',
+      designedWithPurpose: 'Designed with Purpose',
+      ecoFriendlyDescription: 'Discover eco-friendly furniture for modern living, crafted with nature in mind',
+      ecoFriendlyBrand: 'ECO-FRIENDLY BRAND',
+      galleryButton: 'GALLERY →',
+      contactButton: 'CONTACT →',
+      craftedForDurability: 'Crafted for Durability, Priced for Accessibility',
+      sustainablePractices: 'Sustainable Practices Through Repurposing',
+      collaborateWithCommunities: 'Collaborate with eco focused communities',
+      section01: '01',
+      section02: '02',
+      section03: '03',
     }
   }
 };
