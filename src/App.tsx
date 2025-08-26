@@ -8,11 +8,26 @@ import IndexCopy from "./pages/Index copy";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import { useScrollToTop } from "./hooks/use-scroll-to-top";
 
 // Import i18n
 import "./lib/i18n";
 
 const queryClient = new QueryClient();
+
+const AppContent = () => {
+  useScrollToTop();
+  
+  return (
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/index-copy" element={<IndexCopy />} />
+      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -20,13 +35,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/index-copy" element={<IndexCopy />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AppContent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

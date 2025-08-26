@@ -1,12 +1,37 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ContactForm from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 const Index = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  useScrollToTop();
+
+  const handleGalleryClick = () => {
+    // Immediately scroll to top before navigation
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+    // Navigate to gallery
+    navigate('/gallery');
+  };
+
+  const handleContactClick = () => {
+    // Immediately scroll to top before navigation
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+    // Navigate to contact
+    navigate('/contact');
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -77,16 +102,20 @@ const Index = () => {
               </div>
               
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 md:bottom-6 md:left-auto md:right-6 md:translate-x-0 flex gap-3 md:gap-4">
-                <Link to="/gallery">
-                  <Button variant="outline" className="bg-white/90 backdrop-blur-sm border-gray-200 text-black px-4 py-2 rounded-full text-xs">
-                    {t('galleryButton')}
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button variant="outline" className="bg-white/90 backdrop-blur-sm border-gray-200 text-black px-4 py-2 rounded-full text-xs">
-                    {t('contactButton')}
-                  </Button>
-                </Link>
+                <Button 
+                  variant="outline" 
+                  className="bg-white/90 backdrop-blur-sm border-gray-200 text-black px-4 py-2 rounded-full text-xs"
+                  onClick={handleGalleryClick}
+                >
+                  {t('galleryButton')}
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="bg-white/90 backdrop-blur-sm border-gray-200 text-black px-4 py-2 rounded-full text-xs"
+                  onClick={handleContactClick}
+                >
+                  {t('contactButton')}
+                </Button>
               </div>
             </div>
           </div>

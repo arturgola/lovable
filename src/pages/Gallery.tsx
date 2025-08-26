@@ -1,10 +1,12 @@
 import { useTranslation } from "react-i18next";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import ImageGallery from "@/components/ImageGallery";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Gallery = () => {
   const { t } = useTranslation();
+  useScrollToTop();
 
   const galleryImages = [
     {

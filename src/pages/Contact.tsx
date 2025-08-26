@@ -1,11 +1,13 @@
 
 import { useTranslation } from "react-i18next";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import ContactForm from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Contact = () => {
   const { t } = useTranslation();
+  useScrollToTop();
 
   return (
     <div className="min-h-screen flex flex-col">
