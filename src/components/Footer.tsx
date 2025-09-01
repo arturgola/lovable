@@ -1,7 +1,6 @@
-
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -9,8 +8,10 @@ const Footer = () => {
   const location = useLocation();
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'et' ? 'en' : 'et';
-    i18n.changeLanguage(newLang);
+    const languages = ["et", "en", "fi"];
+    const currentIndex = languages.indexOf(i18n.language);
+    const nextIndex = (currentIndex + 1) % languages.length;
+    i18n.changeLanguage(languages[nextIndex]);
   };
 
   const isActive = (path: string) => {
@@ -22,7 +23,7 @@ const Footer = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -43,50 +44,60 @@ const Footer = () => {
               to="/"
               onClick={handleHomeClick}
               className={`text-xs hover:text-primary/80 transition-colors ${
-                isActive('/') ? 'font-medium' : ''
+                isActive("/") ? "font-medium" : ""
               }`}
             >
-              {t('mainPage')}
+              {t("mainPage")}
             </Link>
             <Link
               to="/gallery"
               className={`text-xs hover:text-primary/80 transition-colors ${
-                isActive('/gallery') ? 'font-medium' : ''
+                isActive("/gallery") ? "font-medium" : ""
               }`}
             >
-              {t('gallery')}
+              {t("gallery")}
             </Link>
           </nav>
 
           {/* Language Toggle */}
-          <div className="hidden md:flex items-center space-x-4 ml-auto">
-            <Button variant="ghost" size="sm" onClick={toggleLanguage} className="h-8 px-2 text-xs">
-              {i18n.language === 'et' ? 'EN' : 'ET'}
+          <div className="hidden md:flex items-center ml-auto">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="h-8 px-2 text-xs"
+            >
+              {i18n.language.toUpperCase()}
             </Button>
           </div>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden flex items-center ml-auto space-x-4">
-            <Button variant="ghost" size="sm" className="h-8 px-2 text-xs" onClick={toggleLanguage}>
-              {i18n.language === 'et' ? 'EN' : 'ET'}
+          <div className="md:hidden flex items-center ml-auto">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="h-8 px-2 text-xs"
+            >
+              {i18n.language.toUpperCase()}
             </Button>
             <nav className="flex items-center space-x-4">
               <Link
                 to="/"
                 onClick={handleHomeClick}
                 className={`text-xs hover:text-primary/80 transition-colors ${
-                  isActive('/') ? 'font-medium' : ''
+                  isActive("/") ? "font-medium" : ""
                 }`}
               >
-                {t('mainPage')}
+                {t("mainPage")}
               </Link>
               <Link
                 to="/gallery"
                 className={`text-xs hover:text-primary/80 transition-colors ${
-                  isActive('/gallery') ? 'font-medium' : ''
+                  isActive("/gallery") ? "font-medium" : ""
                 }`}
               >
-                {t('gallery')}
+                {t("gallery")}
               </Link>
             </nav>
           </div>
