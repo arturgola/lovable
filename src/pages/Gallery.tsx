@@ -24,47 +24,32 @@ const Gallery = () => {
           id: 1,
           src: "/images/1.png",
           alt: "Custom wooden door with glass panels",
-          note: "Elegant custom wooden door featuring beautiful glass panels that allow natural light to flow through while maintaining privacy and style.",
+          note: "",
         },
         {
           id: 2,
           src: "/images/1-real.png",
           alt: "Modern entrance door",
-          note: "Contemporary entrance door design with clean lines and modern aesthetics, perfect for contemporary homes and commercial spaces.",
+          note: "",
         },
       ],
     },
     {
       id: 2,
       images: [
-        {
-          id: 3,
-          src: "/images/2.png",
-          alt: "Rustic wooden door",
-          note: "Handcrafted rustic wooden door showcasing natural wood grain and traditional craftsmanship, adding warmth and character to any space.",
-        },
-        {
-          id: 4,
-          src: "/images/2.png",
-          alt: "Rustic door detail",
-          note: "Close-up view of the rustic door's natural wood texture and handcrafted details that showcase traditional woodworking techniques.",
-        },
+        { id: 3, src: "/images/2.png", alt: "Rustic wooden door", note: "" },
+        { id: 4, src: "/images/2.png", alt: "Rustic door detail", note: "" },
       ],
     },
     {
       id: 3,
       images: [
-        {
-          id: 5,
-          src: "/images/3.png",
-          alt: "Black front door",
-          note: "Striking black front door that makes a bold statement, combining modern sophistication with timeless elegance for your home's entrance.",
-        },
+        { id: 5, src: "/images/3.png", alt: "Black front door", note: "" },
         {
           id: 6,
           src: "/images/3.png",
           alt: "Black door installation",
-          note: "Professional installation of the black front door, showing how it enhances the overall aesthetic of the home's exterior.",
+          note: "",
         },
       ],
     },
@@ -75,30 +60,25 @@ const Gallery = () => {
           id: 7,
           src: "/images/4.png",
           alt: "Decorative wooden door",
-          note: "Artistically designed decorative wooden door featuring intricate carvings and details that serve as a focal point and conversation starter.",
+          note: "",
         },
         {
           id: 8,
           src: "/images/4.png",
           alt: "Decorative door close-up",
-          note: "Detailed view of the decorative door's intricate carvings and artistic elements that demonstrate exceptional craftsmanship.",
+          note: "",
         },
       ],
     },
     {
       id: 5,
       images: [
-        {
-          id: 9,
-          src: "/images/5.png",
-          alt: "Colorful door",
-          note: "Vibrant and colorful door design that adds personality and charm to any space, perfect for those who love bold and creative expressions.",
-        },
+        { id: 9, src: "/images/5.png", alt: "Colorful door", note: "" },
         {
           id: 10,
           src: "/images/5.png",
           alt: "Colorful door in context",
-          note: "The colorful door shown in its natural environment, demonstrating how it brightens and enhances the surrounding space.",
+          note: "",
         },
       ],
     },
@@ -109,14 +89,81 @@ const Gallery = () => {
           id: 11,
           src: "/images/1-real.png",
           alt: "Classic wooden door",
-          note: "Timeless classic wooden door design that combines traditional aesthetics with modern functionality, suitable for any architectural style.",
+          note: "",
         },
+        { id: 12, src: "/images/1.png", alt: "Classic door detail", note: "" },
+      ],
+    },
+    {
+      id: 7,
+      images: [
         {
-          id: 12,
-          src: "/images/1.png",
-          alt: "Classic door detail",
-          note: "Detailed view highlighting the classic door's refined proportions and elegant design elements that never go out of style.",
+          id: 11,
+          src: "/images/1-real.png",
+          alt: "Classic wooden door",
+          note: "",
         },
+        { id: 12, src: "/images/1.png", alt: "Classic door detail", note: "" },
+      ],
+    },
+    {
+      id: 8,
+      images: [
+        {
+          id: 11,
+          src: "/images/1-real.png",
+          alt: "Classic wooden door",
+          note: "",
+        },
+        { id: 12, src: "/images/1.png", alt: "Classic door detail", note: "" },
+      ],
+    },
+    {
+      id: 9,
+      images: [
+        {
+          id: 11,
+          src: "/images/1-real.png",
+          alt: "Classic wooden door",
+          note: "",
+        },
+        { id: 12, src: "/images/1.png", alt: "Classic door detail", note: "" },
+      ],
+    },
+    {
+      id: 10,
+      images: [
+        {
+          id: 11,
+          src: "/images/1-real.png",
+          alt: "Classic wooden door",
+          note: "",
+        },
+        { id: 12, src: "/images/1.png", alt: "Classic door detail", note: "" },
+      ],
+    },
+    {
+      id: 11,
+      images: [
+        {
+          id: 11,
+          src: "/images/1-real.png",
+          alt: "Classic wooden door",
+          note: "",
+        },
+        { id: 12, src: "/images/1.png", alt: "Classic door detail", note: "" },
+      ],
+    },
+    {
+      id: 12,
+      images: [
+        {
+          id: 11,
+          src: "/images/1-real.png",
+          alt: "Classic wooden door",
+          note: "",
+        },
+        { id: 12, src: "/images/1.png", alt: "Classic door detail", note: "" },
       ],
     },
   ];
