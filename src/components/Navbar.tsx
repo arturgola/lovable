@@ -5,6 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
+  // Scroll to top when navigating to Gallery
+  const handleGalleryClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    // No need to prevent default, navigation will happen
+  };
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,6 +59,7 @@ const Navbar = () => {
               className={`text-sm hover:text-primary/80 transition-colors ${
                 isActive("/gallery") ? "font-medium" : ""
               }`}
+              onClick={handleGalleryClick}
             >
               {t("gallery")}
             </Link>
@@ -111,7 +117,10 @@ const Navbar = () => {
                   className={`text-lg hover:text-primary/80 transition-colors ${
                     isActive("/gallery") ? "font-medium" : ""
                   }`}
-                  onClick={closeMenu}
+                  onClick={(e) => {
+                    handleGalleryClick();
+                    closeMenu();
+                  }}
                 >
                   {t("gallery")}
                 </Link>

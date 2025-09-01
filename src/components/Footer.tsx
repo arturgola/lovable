@@ -4,6 +4,10 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
+  // Scroll to top when navigating to Gallery
+  const handleGalleryClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  };
   const { t, i18n } = useTranslation();
   const location = useLocation();
 
@@ -54,6 +58,7 @@ const Footer = () => {
               className={`text-xs hover:text-primary/80 transition-colors ${
                 isActive("/gallery") ? "font-medium" : ""
               }`}
+              onClick={handleGalleryClick}
             >
               {t("gallery")}
             </Link>
@@ -96,6 +101,7 @@ const Footer = () => {
                 className={`text-xs hover:text-primary/80 transition-colors ${
                   isActive("/gallery") ? "font-medium" : ""
                 }`}
+                onClick={handleGalleryClick}
               >
                 {t("gallery")}
               </Link>

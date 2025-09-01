@@ -1,3 +1,4 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -10,10 +11,23 @@ const Index = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Clear the flag after checking
-  if (sessionStorage.getItem("preserveScroll")) {
-    sessionStorage.removeItem("preserveScroll");
-  }
+  // Scroll to contact section if preserveScroll flag is set
+  React.useEffect(() => {
+    if (sessionStorage.getItem("preserveScroll")) {
+      sessionStorage.removeItem("preserveScroll");
+      // Scroll to the contact section at the bottom of the page
+      const contactSection = document.querySelector("section.bg-background");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        // fallback: scroll to bottom
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, []);
 
   const handleGalleryClick = () => {
     // Immediately scroll to top before navigation
