@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,12 +8,14 @@ import { Textarea } from "@/components/ui/textarea";
 interface FormValues {
   name: string;
   email: string;
+  phone: string;
   message: string;
 }
 
 interface FormErrors {
   name?: string;
   email?: string;
+  phone?: string;
   message?: string;
 }
 
@@ -22,77 +24,88 @@ const ContactForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [values, setValues] = useState<FormValues>({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
 
   const validate = () => {
     const newErrors: FormErrors = {};
     if (!values.name.trim()) {
-      newErrors.name = t('nameRequired');
+      newErrors.name = t("nameRequired");
     }
     if (!values.email.trim()) {
-      newErrors.email = t('emailRequired');
+      newErrors.email = t("emailRequired");
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
-      newErrors.email = t('emailInvalid');
+      newErrors.email = t("emailInvalid");
+    }
+    if (
+      values.phone.trim() &&
+      !/^[\+]?[0-9\s\-\(\)]{7,15}$/.test(values.phone.trim())
+    ) {
+      newErrors.phone = t("phoneInvalid");
     }
     if (!values.message.trim()) {
-      newErrors.message = t('messageRequired');
+      newErrors.message = t("messageRequired");
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setValues(prev => ({ ...prev, [name]: value }));
+    setValues((prev) => ({ ...prev, [name]: value }));
     if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({ ...prev, [name]: undefined }));
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validate()) return;
-    
+
     setIsSubmitting(true);
 
     try {
       const form = e.currentTarget;
       const formData = new FormData(form);
-      
-      // Add the form-name field required by Netlify
-      formData.append('form-name', 'contact');
 
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      // Add the form-name field required by Netlify
+      formData.append("form-name", "contact");
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
 
       if (response.ok) {
         toast({
-          title: t('formSuccess'),
-          description: '',
+          title: t("formSuccess"),
+          description: "",
         });
 
         // Reset form values
         setValues({
-          name: '',
-          email: '',
-          message: '',
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
         });
       } else {
-        throw new Error('Form submission failed');
+        throw new Error("Form submission failed");
       }
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error("Form submission error:", error);
       toast({
-        title: 'Error',
-        description: 'There was an error submitting the form. Please try again.',
-        variant: 'destructive',
+        title: "Error",
+        description:
+          "There was an error submitting the form. Please try again.",
+        variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
@@ -100,9 +113,9 @@ const ContactForm = () => {
   };
 
   return (
-    <form 
-      name="contact" 
-      method="POST" 
+    <form
+      name="contact"
+      method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
       className="space-y-4"
@@ -110,17 +123,21 @@ const ContactForm = () => {
     >
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="bot-field" />
-      
+
       <div>
         <Input
           id="name"
           name="name"
-          placeholder={t('name')}
+          placeholder={t("name")}
           value={values.name}
           onChange={handleChange}
-          className={`border-0 border-b rounded-none px-0 ${errors.name ? 'border-destructive' : 'border-border'}`}
+          className={`border-0 border-b rounded-none px-0 ${
+            errors.name ? "border-destructive" : "border-border"
+          }`}
         />
-        {errors.name && <p className="text-xs text-destructive mt-1">{errors.name}</p>}
+        {errors.name && (
+          <p className="text-xs text-destructive mt-1">{errors.name}</p>
+        )}
       </div>
 
       <div>
@@ -128,41 +145,67 @@ const ContactForm = () => {
           id="email"
           name="email"
           type="email"
-          placeholder={t('email')}
+          placeholder={t("email")}
           value={values.email}
           onChange={handleChange}
-          className={`border-0 border-b rounded-none px-0 ${errors.email ? 'border-destructive' : 'border-border'}`}
+          className={`border-0 border-b rounded-none px-0 ${
+            errors.email ? "border-destructive" : "border-border"
+          }`}
         />
-        {errors.email && <p className="text-xs text-destructive mt-1">{errors.email}</p>}
+        {errors.email && (
+          <p className="text-xs text-destructive mt-1">{errors.email}</p>
+        )}
+      </div>
+
+      <div>
+        <Input
+          id="phone"
+          name="phone"
+          type="tel"
+          placeholder={t("phonePlaceholder")}
+          value={values.phone}
+          onChange={handleChange}
+          className={`border-0 border-b rounded-none px-0 ${
+            errors.phone ? "border-destructive" : "border-border"
+          }`}
+        />
+        {errors.phone && (
+          <p className="text-xs text-destructive mt-1">{errors.phone}</p>
+        )}
       </div>
 
       <div>
         <Textarea
           id="message"
           name="message"
-          placeholder={t('message')}
+          placeholder={t("message")}
           rows={3}
           value={values.message}
           onChange={handleChange}
-          className={`border-0 border-b rounded-none px-0 resize-none ${errors.message ? 'border-destructive' : 'border-border'}`}
+          className={`border-0 border-b rounded-none px-0 resize-none ${
+            errors.message ? "border-destructive" : "border-border"
+          }`}
         />
-        {errors.message && <p className="text-xs text-destructive mt-1">{errors.message}</p>}
+        {errors.message && (
+          <p className="text-xs text-destructive mt-1">{errors.message}</p>
+        )}
       </div>
 
       <div>
-        <Button 
-          type="submit" 
+        <Button
+          type="submit"
           disabled={isSubmitting}
-          variant="outline" 
+          variant="outline"
           className="rounded-none px-6 py-2 border"
         >
-          {isSubmitting ? 
+          {isSubmitting ? (
             <span className="flex items-center gap-2">
-              <span className="animate-spin">◌</span> 
-              {t('submit')}
-            </span> : 
-            t('submit')
-          }
+              <span className="animate-spin">◌</span>
+              {t("submit")}
+            </span>
+          ) : (
+            t("submit")
+          )}
         </Button>
       </div>
     </form>

@@ -29,16 +29,19 @@ const resources = {
         "Täitke allolev vorm ja me võtame teiega peagi ühendust",
       name: "Nimi",
       email: "E-post",
+      phone: "Telefon",
       message: "Sõnum",
       submit: "Saada",
       namePlaceholder: "Teie nimi",
       emailPlaceholder: "teie@email.ee",
+      phonePlaceholder: "Telefon (valikuline)",
       messagePlaceholder: "Teie sõnum...",
 
       // Form validation
       nameRequired: "Nimi on kohustuslik",
       emailRequired: "E-post on kohustuslik",
       emailInvalid: "Palun sisestage kehtiv e-posti aadress",
+      phoneInvalid: "Palun sisestage kehtiv telefoninumber",
       messageRequired: "Sõnum on kohustuslik",
 
       // Success messages
@@ -95,16 +98,19 @@ const resources = {
         "Fill out the form below and we'll get back to you shortly",
       name: "Name",
       email: "Email",
+      phone: "Phone",
       message: "Message",
       submit: "Submit",
       namePlaceholder: "Your name",
       emailPlaceholder: "your@email.com",
+      phonePlaceholder: "Phone (optional)",
       messagePlaceholder: "Your message...",
 
       // Form validation
       nameRequired: "Name is required",
       emailRequired: "Email is required",
       emailInvalid: "Please enter a valid email address",
+      phoneInvalid: "Please enter a valid phone number",
       messageRequired: "Message is required",
 
       // Success messages
@@ -161,16 +167,19 @@ const resources = {
         "Täytä alla oleva lomake, niin otamme sinuun pian yhteyttä",
       name: "Nimi",
       email: "Sähköposti",
+      phone: "Puhelin",
       message: "Viesti",
       submit: "Lähetä",
       namePlaceholder: "Sinun nimesi",
       emailPlaceholder: "sinun@email.fi",
+      phonePlaceholder: "Puhelin (valinnainen)",
       messagePlaceholder: "Sinun viestisi...",
 
       // Form validation
       nameRequired: "Nimi on pakollinen",
       emailRequired: "Sähköposti on pakollinen",
       emailInvalid: "Anna kelvollinen sähköpostiosoite",
+      phoneInvalid: "Anna kelvollinen puhelinnumero",
       messageRequired: "Viesti on pakollinen",
 
       // Success messages
