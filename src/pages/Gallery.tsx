@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import ImageGallery from "@/components/ImageGallery";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,13 +8,12 @@ import Footer from "@/components/Footer";
 const Gallery = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  useScrollToTop(false);
 
   const handleContactClick = () => {
     // Set a flag to preserve scroll position
-    sessionStorage.setItem('preserveScroll', 'true');
+    sessionStorage.setItem("preserveScroll", "true");
     // Navigate to index page
-    navigate('/');
+    navigate("/");
   };
 
   const galleryImages = [
@@ -33,8 +31,8 @@ const Gallery = () => {
           src: "/images/1-real.png",
           alt: "Modern entrance door",
           note: "Contemporary entrance door design with clean lines and modern aesthetics, perfect for contemporary homes and commercial spaces.",
-        }
-      ]
+        },
+      ],
     },
     {
       id: 2,
@@ -50,8 +48,8 @@ const Gallery = () => {
           src: "/images/2.png",
           alt: "Rustic door detail",
           note: "Close-up view of the rustic door's natural wood texture and handcrafted details that showcase traditional woodworking techniques.",
-        }
-      ]
+        },
+      ],
     },
     {
       id: 3,
@@ -67,8 +65,8 @@ const Gallery = () => {
           src: "/images/3.png",
           alt: "Black door installation",
           note: "Professional installation of the black front door, showing how it enhances the overall aesthetic of the home's exterior.",
-        }
-      ]
+        },
+      ],
     },
     {
       id: 4,
@@ -84,8 +82,8 @@ const Gallery = () => {
           src: "/images/4.png",
           alt: "Decorative door close-up",
           note: "Detailed view of the decorative door's intricate carvings and artistic elements that demonstrate exceptional craftsmanship.",
-        }
-      ]
+        },
+      ],
     },
     {
       id: 5,
@@ -101,8 +99,8 @@ const Gallery = () => {
           src: "/images/5.png",
           alt: "Colorful door in context",
           note: "The colorful door shown in its natural environment, demonstrating how it brightens and enhances the surrounding space.",
-        }
-      ]
+        },
+      ],
     },
     {
       id: 6,
@@ -118,8 +116,8 @@ const Gallery = () => {
           src: "/images/1.png",
           alt: "Classic door detail",
           note: "Detailed view highlighting the classic door's refined proportions and elegant design elements that never go out of style.",
-        }
-      ]
+        },
+      ],
     },
   ];
 
@@ -132,14 +130,14 @@ const Gallery = () => {
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
             <div className="flex items-baseline justify-center gap-2 mb-3 md:mb-4">
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight">
-                {t('galleryTitle')}
+                {t("galleryTitle")}
               </h1>
               <span className="inline-flex items-baseline gap-1 px-1 py-0 bg-muted text-muted-foreground text-[9px] font-medium rounded-full leading-none">
                 <span className="w-0.5 h-0.5 bg-foreground rounded-full"></span>
                 AI Enhanced
               </span>
             </div>
-{/*             <p className="text-base md:text-lg text-muted-foreground">
+            {/*             <p className="text-base md:text-lg text-muted-foreground">
               Discover our collection of custom-crafted doors, each designed to enhance your living space with exceptional quality and timeless beauty. 
               From contemporary designs to classic elegance, find the perfect door that reflects your personal style and complements your interior aesthetic.
             </p> */}
@@ -168,12 +166,12 @@ const Gallery = () => {
 
           {/* Contact Button - After Gallery in Right Corner */}
           <div className="flex justify-end mt-8">
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="bg-white/90 backdrop-blur-sm border-gray-200 text-black px-4 py-2 rounded-full text-xs hover:bg-white transition-colors"
               onClick={handleContactClick}
             >
-              {t('contactButton')}
+              {t("contactButton")}
             </Button>
           </div>
         </div>

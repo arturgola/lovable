@@ -1,13 +1,10 @@
-
 import { useTranslation } from "react-i18next";
-import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import ContactForm from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Contact = () => {
   const { t } = useTranslation();
-  useScrollToTop(true);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -18,10 +15,10 @@ const Contact = () => {
           <div className="max-w-xl mx-auto">
             <div className="text-center mb-8">
               <h1 className="text-3xl md:text-4xl font-medium tracking-tight mb-4">
-                {t('contactTitle')}
+                {t("contactTitle")}
               </h1>
               <p className="text-lg text-muted-foreground">
-                {t('contactDescription')}
+                {t("contactDescription")}
               </p>
             </div>
 
