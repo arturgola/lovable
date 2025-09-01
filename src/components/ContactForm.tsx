@@ -8,14 +8,14 @@ import { Textarea } from "@/components/ui/textarea";
 interface FormValues {
   name: string;
   email: string;
-  phone: string;
+  // ...existing code...
   message: string;
 }
 
 interface FormErrors {
   name?: string;
   email?: string;
-  phone?: string;
+  // ...existing code...
   message?: string;
 }
 
@@ -26,7 +26,6 @@ const ContactForm = () => {
   const [values, setValues] = useState<FormValues>({
     name: "",
     email: "",
-    phone: "",
     message: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
@@ -41,12 +40,7 @@ const ContactForm = () => {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
       newErrors.email = t("emailInvalid");
     }
-    if (
-      values.phone.trim() &&
-      !/^[\+]?[0-9\s\-\(\)]{7,15}$/.test(values.phone.trim())
-    ) {
-      newErrors.phone = t("phoneInvalid");
-    }
+    // ...existing code...
     if (!values.message.trim()) {
       newErrors.message = t("messageRequired");
     }
@@ -93,7 +87,6 @@ const ContactForm = () => {
         setValues({
           name: "",
           email: "",
-          phone: "",
           message: "",
         });
       } else {
@@ -157,22 +150,7 @@ const ContactForm = () => {
         )}
       </div>
 
-      <div>
-        <Input
-          id="phone"
-          name="phone"
-          type="tel"
-          placeholder={t("phonePlaceholder")}
-          value={values.phone}
-          onChange={handleChange}
-          className={`border-0 border-b rounded-none px-0 ${
-            errors.phone ? "border-destructive" : "border-border"
-          }`}
-        />
-        {errors.phone && (
-          <p className="text-xs text-destructive mt-1">{errors.phone}</p>
-        )}
-      </div>
+      {/* Phone input removed */}
 
       <div>
         <Textarea

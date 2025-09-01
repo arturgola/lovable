@@ -35,11 +35,13 @@ const Footer = () => {
     <footer className="border-t border-border py-4 bg-background">
       <div className="container-custom">
         <div className="relative flex items-center w-full h-12">
-          {/* Logo */}
-          <div className="flex-shrink-0">
+          {/* Logo and Contact Info */}
+          <div className="flex-shrink-0 flex flex-col">
             <Link to="/" className="text-sm font-medium tracking-tight">
               Askordoors
             </Link>
+            <span className="text-xs mt-1">askordoors@gmail.com</span>
+            <span className="text-xs">+37256254169</span>
           </div>
 
           {/* Centered Nav */}
