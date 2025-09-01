@@ -112,7 +112,7 @@ const resources = {
 
       // New translations from Index.tsx
       sectionA: '(A)',
-      furnitureWithValue: 'Furniture with Value',
+      furnitureWithValue: 'Product with Value',
       designedWithPurpose: 'Designed with Purpose',
       ecoFriendlyDescription: 'Discover stylish doors for modern living',
       ecoFriendlyBrand: 'LOCAL BRAND',
