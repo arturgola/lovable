@@ -10,23 +10,23 @@ const resources = {
       contact: "Kontakt",
 
       // Main page
-      aboutTitle: "Eritellimusel uksed",
+      aboutTitle: "Askordoors OÜ",
       aboutDescription:
-        "Oleme pühendunud kõrgekvaliteetsete eritellimusel uste valmistamisele. Meie uksed on valmistatud parimatest materjalidest ja valmistatud kogenud meistrite poolt.",
+        "Me valmistame ja paigaldame kõrgekvaliteetseid eritellimusel uksed. Meie tooted on valmistatud parimatest saadaolevatest materjalidest ja kogenud käsitööliste poolt.",
       learnMore: "Loe rohkem",
       artistPlatform:
-        "Me tahame pakkuda kunstnikele platvormi, kus nad saaksid end maailmale näidata. Meie kogu sisaldab kaasaegset mööblit, keraamikat, skulptuure ja disaini. Disainerid ulatuvad tunnustatud meistritest kuni tekkivate talentideni, kusjuures igaühel on oma eripärane lähenemine või stiil, mis on mingil viisil ainulaadne.",
+        "<strong>Me pakume laia valikut uksed</strong>: välisuksed majadele, välisuksed korteritele, välisuksed kortermajadele, välisuksed külgpaneelidega, pärandkaitse uksed, välisuksed ajalooliselt või keskkonnalt väärtuslikele hoonetele, kahelehelised uksed ja palju muud",
       uniqueMaterials:
-        "Unikaalsete ja eriliste materjalide kasutamisega, mis suudavad muuta mitmekesiseid interjööre ja stiile, püüavad meie disainid peegeldada kunstiliste päritolude ja oskuste mitmekesisust pidevalt muutuvas ja arenevas ruumis.",
+        "Kõik uksed valmistatakse vastavalt teie soovidele – võite saata meile foto (nt olemasolevast uksest), lingi internetist või lihtsalt kirjelduse soovitud ukse tüübist. <strong>Tarneaeg on 3–5 nädalat pärast 50% ettemaksu</strong>.",
 
       // Gallery
       galleryTitle: "Meie tööd",
-      galleryDescription: "Vaata meie viimaste projektide galeriid",
+      galleryDescription: "Vaadake meie hiljutiste projektide galeriid",
 
       // Contact form
-      contactTitle: "Võta meiega ühendust",
+      contactTitle: "Võtke meiega ühendust",
       contactDescription:
-        "Täida allolev vorm ja me võtame teiega peagi ühendust",
+        "Täitke allolev vorm ja me võtame teiega peagi ühendust",
       name: "Nimi",
       email: "E-post",
       message: "Sõnum",
@@ -46,7 +46,7 @@ const resources = {
 
       // Footer
       rightsReserved: "Kõik õigused kaitstud",
-      termsAndConditions: "Tingimused",
+      termsAndConditions: "Tingimused ja Tingimused",
       privacyPolicy: "Privaatsuspoliitika",
 
       // Language selection
@@ -54,16 +54,15 @@ const resources = {
 
       // New translations from Index.tsx
       sectionA: "(A)",
-      furnitureWithValue: "Mööbel väärtusega",
+      furnitureWithValue: "Toode väärtusega",
       designedWithPurpose: "Disainitud eesmärgiga",
-      ecoFriendlyDescription:
-        "Avasta keskkonnasõbralik mööbel kaasaegseks eluks, loodud looduse mõtlemisega",
-      ecoFriendlyBrand: "KESKKONNASÕBRALIK BRÄND",
+      ecoFriendlyDescription: "Avastage stiilsed uksed kaasaegseks eluks",
+      ecoFriendlyBrand: "KOHALIK BRÄND",
       galleryButton: "GALERII →",
       contactButton: "KONTAKT →",
-      craftedForDurability: "Loodud vastupidavuseks, hinnatud kättesaadavuseks",
-      sustainablePractices: "Jätkusuutlikud praktikad ümberkasutamise kaudu",
-      collaborateWithCommunities: "Koostöö keskkonnahuviliste kogukondadega",
+      craftedForDurability: "Massiivpuit, siseuks",
+      sustainablePractices: "Massiivpuit, paksus 43 mm",
+      collaborateWithCommunities: "Männipuit ja HDF, 43 mm",
       section01: "01",
       section02: "02",
       section03: "03",
@@ -159,7 +158,7 @@ const resources = {
       // Contact form
       contactTitle: "Ota yhteyttä",
       contactDescription:
-        "Täida alla oleva lomake, niin otamme sinuun pian yhteyttä",
+        "Täytä alla oleva lomake, niin otamme sinuun pian yhteyttä",
       name: "Nimi",
       email: "Sähköposti",
       message: "Viesti",
@@ -179,7 +178,7 @@ const resources = {
 
       // Footer
       rightsReserved: "Kaikki oikeudet pidätetään",
-      termsAndConditions: "Ehdot",
+      termsAndConditions: "Ehdot ja edellytykset",
       privacyPolicy: "Tietosuojakäytäntö",
 
       // Language selection
@@ -190,7 +189,7 @@ const resources = {
       furnitureWithValue: "Tuote, jolla on arvoa",
       designedWithPurpose: "Suunniteltu tarkoituksella",
       ecoFriendlyDescription: "Tutustu tyylikkäisiin oviin moderniin elämään",
-      ecoFriendlyBrand: "PAIKALLINEN BRÄNDI",
+      ecoFriendlyBrand: "PAIKALLINEN MERKKI",
       galleryButton: "GALLERIA →",
       contactButton: "YHTEYS →",
       craftedForDurability: "Massiivipuuta, sisäovi",
