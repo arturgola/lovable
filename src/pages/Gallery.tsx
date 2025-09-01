@@ -23,13 +23,13 @@ const Gallery = () => {
         {
           id: 1,
           src: "/images/1.png",
-          alt: "Custom wooden door with glass panels",
+          alt: "",
           note: "",
         },
         {
           id: 2,
           src: "/images/1-real.png",
-          alt: "Modern entrance door",
+          alt: "",
           note: "",
         },
       ],
@@ -37,18 +37,18 @@ const Gallery = () => {
     {
       id: 2,
       images: [
-        { id: 3, src: "/images/2.png", alt: "Rustic wooden door", note: "" },
-        { id: 4, src: "/images/2.png", alt: "Rustic door detail", note: "" },
+        { id: 3, src: "/images/2.png", alt: "", note: "" },
+        { id: 4, src: "/images/2.png", alt: "", note: "" },
       ],
     },
     {
       id: 3,
       images: [
-        { id: 5, src: "/images/3.png", alt: "Black front door", note: "" },
+        { id: 5, src: "/images/3.png", alt: "", note: "" },
         {
           id: 6,
           src: "/images/3.png",
-          alt: "Black door installation",
+          alt: "",
           note: "",
         },
       ],
@@ -59,13 +59,13 @@ const Gallery = () => {
         {
           id: 7,
           src: "/images/4.png",
-          alt: "Decorative wooden door",
+          alt: "",
           note: "",
         },
         {
           id: 8,
           src: "/images/4.png",
-          alt: "Decorative door close-up",
+          alt: "",
           note: "",
         },
       ],
@@ -73,11 +73,11 @@ const Gallery = () => {
     {
       id: 5,
       images: [
-        { id: 9, src: "/images/5.png", alt: "Colorful door", note: "" },
+        { id: 9, src: "/images/5.png", alt: "", note: "" },
         {
           id: 10,
           src: "/images/5.png",
-          alt: "Colorful door in context",
+          alt: "",
           note: "",
         },
       ],
@@ -88,10 +88,10 @@ const Gallery = () => {
         {
           id: 11,
           src: "/images/1-real.png",
-          alt: "Classic wooden door",
+          alt: "",
           note: "",
         },
-        { id: 12, src: "/images/1.png", alt: "Classic door detail", note: "" },
+        { id: 12, src: "/images/1.png", alt: "", note: "" },
       ],
     },
     {
@@ -164,6 +164,13 @@ const Gallery = () => {
           note: "",
         },
         { id: 12, src: "/images/1.png", alt: "Classic door detail", note: "" },
+      ],
+    },
+    {
+      id: 13,
+      images: [
+        { id: 3, src: "/images/2.png", alt: "", note: "" },
+        { id: 4, src: "/images/2.png", alt: "", note: "" },
       ],
     },
   ];
