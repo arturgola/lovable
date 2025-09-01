@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import ImageGallery from "@/components/ImageGallery";
 import Navbar from "@/components/Navbar";
@@ -6,7 +8,15 @@ import Footer from "@/components/Footer";
 
 const Gallery = () => {
   const { t } = useTranslation();
-  useScrollToTop();
+  const navigate = useNavigate();
+  useScrollToTop(false);
+
+  const handleContactClick = () => {
+    // Set a flag to preserve scroll position
+    sessionStorage.setItem('preserveScroll', 'true');
+    // Navigate to index page
+    navigate('/');
+  };
 
   const galleryImages = [
     {
@@ -120,16 +130,22 @@ const Gallery = () => {
       <main className="flex-1 py-8 md:py-16 lg:py-24">
         <div className="container-custom px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight mb-3 md:mb-4">
-              {t('galleryTitle')}
-            </h1>
-            <p className="text-base md:text-lg text-muted-foreground">
+            <div className="flex items-baseline justify-center gap-2 mb-3 md:mb-4">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight">
+                {t('galleryTitle')}
+              </h1>
+              <span className="inline-flex items-baseline gap-1 px-1 py-0 bg-muted text-muted-foreground text-[9px] font-medium rounded-full leading-none">
+                <span className="w-0.5 h-0.5 bg-foreground rounded-full"></span>
+                AI Enhanced
+              </span>
+            </div>
+{/*             <p className="text-base md:text-lg text-muted-foreground">
               Discover our collection of custom-crafted doors, each designed to enhance your living space with exceptional quality and timeless beauty. 
               From contemporary designs to classic elegance, find the perfect door that reflects your personal style and complements your interior aesthetic.
-            </p>
+            </p> */}
           </div>
 
-          <div className="max-w-4xl mx-auto mb-12 md:mb-16">
+          {/* <div className="max-w-4xl mx-auto mb-12 md:mb-16">
             <div className="text-center">
               <h2 className="text-lg md:text-xl font-normal tracking-tight text-foreground mb-4">
                 AI-Enhanced Visual Experience
@@ -144,10 +160,21 @@ const Gallery = () => {
                 </span>
               </p>
             </div>
-          </div>
+          </div> */}
 
           <div className="w-full">
             <ImageGallery images={galleryImages} />
+          </div>
+
+          {/* Contact Button - After Gallery in Right Corner */}
+          <div className="flex justify-end mt-8">
+            <Button 
+              variant="outline" 
+              className="bg-white/90 backdrop-blur-sm border-gray-200 text-black px-4 py-2 rounded-full text-xs hover:bg-white transition-colors"
+              onClick={handleContactClick}
+            >
+              {t('contactButton')}
+            </Button>
           </div>
         </div>
       </main>

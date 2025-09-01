@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import ContactForm from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,7 +9,16 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 const Index = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  useScrollToTop();
+  const location = useLocation();
+  
+  // Only scroll to top if not coming from gallery with preserveScroll flag
+  const shouldScrollToTop = !sessionStorage.getItem('preserveScroll');
+  useScrollToTop(shouldScrollToTop);
+  
+  // Clear the flag after checking
+  if (sessionStorage.getItem('preserveScroll')) {
+    sessionStorage.removeItem('preserveScroll');
+  }
 
   const handleGalleryClick = () => {
     // Immediately scroll to top before navigation
@@ -23,14 +32,14 @@ const Index = () => {
   };
 
   const handleContactClick = () => {
-    // Immediately scroll to top before navigation
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'instant'
-    });
-    // Navigate to contact
-    navigate('/contact');
+    // Scroll to the contact form section at the bottom of the page
+    const contactSection = document.querySelector('section:has(.bg-background)');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   };
 
   return (
@@ -38,48 +47,8 @@ const Index = () => {
       <Navbar />
 
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="pt-12 md:pt-24 pb-6 md:pb-8">
-          <div className="container-custom max-w-6xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-              <p className="text-sm">{t('sectionA')}</p>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight">
-                {t("aboutTitle")}
-              </h1>
-            </div>
-
-            {/* Aligned Description Section */}
-            <div className="max-w-5xl mx-auto space-y-8 md:space-y-12">
-              <div className="flex justify-center">
-                <div className="flex gap-4 md:gap-6 max-w-4xl">
-                  <p className="text-sm w-12 text-right flex-shrink-0">{t('section01')}</p>
-                  <p className="text-base text-muted-foreground">
-                    {t('aboutDescription')}
-                  </p>
-                </div>
-              </div>
-              <div className="flex justify-center">
-                <div className="flex gap-4 md:gap-6 max-w-4xl">
-                  <p className="text-sm w-12 text-right flex-shrink-0">{t('section02')}</p>
-                  <p className="text-base text-muted-foreground">
-                    <span dangerouslySetInnerHTML={{ __html: t('artistPlatform') }} />
-                  </p>
-                </div>
-              </div>
-              <div className="flex justify-center">
-                <div className="flex gap-4 md:gap-6 max-w-4xl">
-                  <p className="text-sm w-12 text-right flex-shrink-0">{t('section03')}</p>
-                  <p className="text-base text-muted-foreground">
-                    <span dangerouslySetInnerHTML={{ __html: t('uniqueMaterials') }} />
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Main Product Image */}
-        <section className="py-8 md:py-14 bg-white">
+        <section className="pt-12 md:pt-24 pb-6 md:pb-8 bg-white">
           <div className="container-custom max-w-7xl mx-auto px-4">
             {/* Text above image (from Index copy) */}
             <div className="text-center mb-8">
@@ -116,6 +85,46 @@ const Index = () => {
                 >
                   {t('contactButton')}
                 </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Hero Section */}
+        <section className="pt-6 md:pt-12 pb-6 md:pb-8">
+          <div className="container-custom max-w-6xl mx-auto">
+            <div className="text-center mb-12 md:mb-16">
+              <p className="text-sm">{t('sectionA')}</p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight">
+                {t("aboutTitle")}
+              </h1>
+            </div>
+
+            {/* Aligned Description Section */}
+            <div className="max-w-5xl mx-auto space-y-8 md:space-y-12">
+              <div className="flex justify-center">
+                <div className="flex gap-4 md:gap-6 max-w-4xl">
+                  <p className="text-sm w-12 text-right flex-shrink-0">{t('section01')}</p>
+                  <p className="text-base text-muted-foreground">
+                    {t('aboutDescription')}
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <div className="flex gap-4 md:gap-6 max-w-4xl">
+                  <p className="text-sm w-12 text-right flex-shrink-0">{t('section02')}</p>
+                  <p className="text-base text-muted-foreground">
+                    <span dangerouslySetInnerHTML={{ __html: t('artistPlatform') }} />
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <div className="flex gap-4 md:gap-6 max-w-4xl">
+                  <p className="text-sm w-12 text-right flex-shrink-0">{t('section03')}</p>
+                  <p className="text-base text-muted-foreground">
+                    <span dangerouslySetInnerHTML={{ __html: t('uniqueMaterials') }} />
+                  </p>
+                </div>
               </div>
             </div>
           </div>

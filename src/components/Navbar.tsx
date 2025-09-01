@@ -55,14 +55,6 @@ const Navbar = () => {
             >
               {t('gallery')}
             </Link>
-            <Link
-              to="/contact"
-              className={`text-sm hover:text-primary/80 transition-colors ${
-                isActive('/contact') ? 'font-medium' : ''
-              }`}
-            >
-              {t('contact')}
-            </Link>
           </nav>
 
           {/* Language Toggle */}
@@ -116,15 +108,6 @@ const Navbar = () => {
                   onClick={closeMenu}
                 >
                   {t('gallery')}
-                </Link>
-                <Link
-                  to="/contact"
-                  className={`text-lg hover:text-primary/80 transition-colors ${
-                    isActive('/contact') ? 'font-medium' : ''
-                  }`}
-                  onClick={closeMenu}
-                >
-                  {t('contact')}
                 </Link>
               </div>
             </div>

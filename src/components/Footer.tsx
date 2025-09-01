@@ -1,72 +1,96 @@
 
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
-  const { t } = useTranslation();
-  const currentYear = new Date().getFullYear();
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'et' ? 'en' : 'et';
+    i18n.changeLanguage(newLang);
+  };
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
+  const handleHomeClick = () => {
+    // Scroll to top of the page
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
-    <footer className="border-t border-border py-8 bg-background">
+    <footer className="border-t border-border py-4 bg-background">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          {/* Company Info */}
-          <div>
-             <h2 className="font-medium mb-2 text-sm">Askordoors OÜ</h2> 
-            <p className="text-sm text-muted-foreground max-w-xs mb-2">
-                askordoors@gmail.com
-            </p>
-            <p className="text-sm text-muted-foreground max-w-xs mb-2">
-                +37256254169
-            </p>
+        <div className="relative flex items-center w-full h-12">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="text-sm font-medium tracking-tight">
+              Askordoors
+            </Link>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            {/* <h3 className="font-medium mb-4">{t('mainPage')}</h3> */}
-            <ul className="space-y-1">
-              <li>
-                <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {t('mainPage')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/gallery" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {t('gallery')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {t('contact')}
-                </Link>
-              </li>
-            </ul>
+          {/* Centered Nav */}
+          <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center space-x-6">
+            <Link
+              to="/"
+              onClick={handleHomeClick}
+              className={`text-xs hover:text-primary/80 transition-colors ${
+                isActive('/') ? 'font-medium' : ''
+              }`}
+            >
+              {t('mainPage')}
+            </Link>
+            <Link
+              to="/gallery"
+              className={`text-xs hover:text-primary/80 transition-colors ${
+                isActive('/gallery') ? 'font-medium' : ''
+              }`}
+            >
+              {t('gallery')}
+            </Link>
+          </nav>
+
+          {/* Language Toggle */}
+          <div className="hidden md:flex items-center space-x-4 ml-auto">
+            <Button variant="ghost" size="sm" onClick={toggleLanguage} className="h-8 px-2 text-xs">
+              {i18n.language === 'et' ? 'EN' : 'ET'}
+            </Button>
           </div>
 
-          {/* Legal */}
-          {/* <div>
-            <h3 className="font-medium mb-4">{t('contact')}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {t('termsAndConditions')}
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {t('privacyPolicy')}
-                </Link>
-              </li>
-            </ul>
-          </div> */}
+          {/* Mobile Navigation */}
+          <div className="md:hidden flex items-center ml-auto space-x-4">
+            <Button variant="ghost" size="sm" className="h-8 px-2 text-xs" onClick={toggleLanguage}>
+              {i18n.language === 'et' ? 'EN' : 'ET'}
+            </Button>
+            <nav className="flex items-center space-x-4">
+              <Link
+                to="/"
+                onClick={handleHomeClick}
+                className={`text-xs hover:text-primary/80 transition-colors ${
+                  isActive('/') ? 'font-medium' : ''
+                }`}
+              >
+                {t('mainPage')}
+              </Link>
+              <Link
+                to="/gallery"
+                className={`text-xs hover:text-primary/80 transition-colors ${
+                  isActive('/gallery') ? 'font-medium' : ''
+                }`}
+              >
+                {t('gallery')}
+              </Link>
+            </nav>
+          </div>
         </div>
-
-        {/* Copyright */}
-        {/* <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} Askordoors. {t('rightsReserved')}.
-          </p>
-        </div> */}
       </div>
     </footer>
   );

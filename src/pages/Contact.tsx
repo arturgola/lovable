@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 const Contact = () => {
   const { t } = useTranslation();
-  useScrollToTop();
+  useScrollToTop(true);
 
   return (
     <div className="min-h-screen flex flex-col">
