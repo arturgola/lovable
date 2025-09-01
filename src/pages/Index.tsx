@@ -78,7 +78,7 @@ const Index = () => {
             <div className="relative mb-4">
               <div className="aspect-[16/10] bg-gray-100 rounded-2xl overflow-hidden">
                 <img
-                  src="/images/3.png"
+                  src="/images/mainPicture.png"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -170,7 +170,7 @@ const Index = () => {
               <div>
                 <div className="aspect-[16/10] md:aspect-[16/10] bg-gray-100 rounded-2xl md:rounded-2xl overflow-hidden max-w-[92%] md:max-w-[85%] mx-auto">
                   <img
-                    src="/images/5.png"
+                    src="/images/ai-images/door-A-11-1.png"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -185,7 +185,7 @@ const Index = () => {
               <div>
                 <div className="aspect-[16/10] md:aspect-[16/10] bg-gray-100 rounded-2xl md:rounded-2xl overflow-hidden max-w-[92%] md:max-w-[85%] mx-auto">
                   <img
-                    src="/images/5.png"
+                    src="/images/mainPicture-2.png"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -200,7 +200,7 @@ const Index = () => {
               <div>
                 <div className="aspect-[16/10] md:aspect-[16/10] bg-gray-100 rounded-2xl md:rounded-2xl overflow-hidden max-w-[92%] md:max-w-[85%] mx-auto">
                   <img
-                    src="/images/5.png"
+                    src="/images/ai-images/door-A-5.png"
                     className="w-full h-full object-cover"
                   />
                 </div>
