@@ -76,7 +76,10 @@ const Footer = () => {
                 className={`fi fi-${
                   languages.find((l) => l.code === i18n.language)?.flag || "xx"
                 }`}
-                style={{ fontSize: "19.2px" }}
+                style={{
+                  fontSize: "19.2px",
+                  boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
+                }}
               ></span>
             </Button>
           </div>
@@ -88,7 +91,10 @@ const Footer = () => {
                 className={`fi fi-${
                   languages.find((l) => l.code === i18n.language)?.flag || "xx"
                 }`}
-                style={{ fontSize: "19.2px" }}
+                style={{
+                  fontSize: "19.2px",
+                  boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
+                }}
               ></span>
             </Button>
             <nav className="flex items-center space-x-4">

@@ -87,7 +87,11 @@ const Navbar = () => {
                 className={`fi fi-${
                   languages.find((l) => l.code === i18n.language)?.flag || "xx"
                 }`}
-                style={{ fontSize: 24 }}
+                style={{
+                  fontSize: 24,
+                  border: "1px solid #f5f5f5",
+                  boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
+                }}
               ></span>
             </Button>
           </div>
@@ -99,7 +103,11 @@ const Navbar = () => {
                 className={`fi fi-${
                   languages.find((l) => l.code === i18n.language)?.flag || "xx"
                 }`}
-                style={{ fontSize: 24 }}
+                style={{
+                  fontSize: 24,
+                  border: "1px solid #f5f5f5",
+                  boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
+                }}
               ></span>
             </Button>
             <Button variant="ghost" size="icon" onClick={toggleMenu}>
