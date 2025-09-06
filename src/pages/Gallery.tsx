@@ -20,7 +20,7 @@ const Gallery = () => {
     {
       id: 1,
       images: [
-        { id: 1, src: "/images/real-images/door1.png", alt: "", note: "" },
+        { id: 1, src: "/images/real-images/door1.png", alt: "", note: "keep" },
         { id: 2, src: "/images/ai-images/door-A-1.png", alt: "", note: "" },
       ],
     },
@@ -28,27 +28,27 @@ const Gallery = () => {
       id: 2,
       images: [
         { id: 3, src: "/images/ai-images/door-A-2.png", alt: "", note: "" },
-        { id: 4, src: "/images/real-images/door2.png", alt: "", note: "" },
+        { id: 4, src: "/images/real-images/door2.png", alt: "", note: "keep" },
       ],
     },
     {
       id: 3,
       images: [
-        { id: 5, src: "/images/real-images/door3.png", alt: "", note: "" },
+        { id: 5, src: "/images/real-images/door3.png", alt: "", note: "keep" },
         { id: 6, src: "/images/ai-images/door-A-3.png", alt: "", note: "" },
       ],
     },
     {
       id: 4,
       images: [
-        { id: 7, src: "/images/ai-images/door-A-4.png", alt: "", note: "" },
+        { id: 7, src: "/images/ai-images/door-A-4.png", alt: "", note: "keep" },
         { id: 8, src: "/images/real-images/door4.jpg", alt: "", note: "" },
       ],
     },
     {
       id: 5,
       images: [
-        { id: 9, src: "/images/ai-images/door-A-5.png", alt: "", note: "" },
+        { id: 9, src: "/images/ai-images/door-A-5.png", alt: "", note: "keep" },
         { id: 10, src: "/images/real-images/door5.jpg", alt: "", note: "" },
       ],
     },
@@ -56,55 +56,71 @@ const Gallery = () => {
       id: 6,
       images: [
         { id: 11, src: "/images/real-images/door6.jpg", alt: "", note: "" },
-        { id: 12, src: "/images/ai-images/door-A-6.png", alt: "", note: "" },
+        {
+          id: 12,
+          src: "/images/ai-images/door-A-6.png",
+          alt: "",
+          note: "keep",
+        },
       ],
     },
     {
       id: 7,
       images: [
-        { id: 13, src: "/images/ai-images/door-A-7.png", alt: "", note: "" },
+        {
+          id: 13,
+          src: "/images/ai-images/door-A-7.png",
+          alt: "",
+          note: "keep, but brighter",
+        },
         { id: 14, src: "/images/real-images/door7.jpg", alt: "", note: "" },
-      ],
-    },
-    {
-      id: 8,
-      images: [
-        { id: 15, src: "/images/real-images/door8.jpg", alt: "", note: "" },
-        { id: 16, src: "/images/ai-images/door-A-8.png", alt: "", note: "" },
       ],
     },
     {
       id: 9,
       images: [
         { id: 17, src: "/images/real-images/door9.png", alt: "", note: "" },
-        { id: 18, src: "/images/ai-images/door-A-9.png", alt: "", note: "" },
-      ],
-    },
-    {
-      id: 10,
-      images: [
-        { id: 19, src: "/images/ai-images/door-A-10.png", alt: "", note: "" },
-        { id: 20, src: "/images/real-images/door10.png", alt: "", note: "" },
+        {
+          id: 18,
+          src: "/images/ai-images/door-A-9.png",
+          alt: "",
+          note: "ai, jos saisi oven kiinnitykset 3 saranalla",
+        },
       ],
     },
     {
       id: 11,
       images: [
-        { id: 21, src: "/images/ai-images/door-A-11.png", alt: "", note: "" },
+        {
+          id: 21,
+          src: "/images/ai-images/door-A-11.png",
+          alt: "",
+          note: "keep",
+        },
         { id: 22, src: "/images/real-images/door11.png", alt: "", note: "" },
       ],
     },
     {
       id: 12,
       images: [
-        { id: 23, src: "/images/real-images/door12.png", alt: "", note: "" },
+        {
+          id: 23,
+          src: "/images/real-images/door12.png",
+          alt: "",
+          note: "keep",
+        },
         { id: 24, src: "/images/ai-images/door-A-12.png", alt: "", note: "" },
       ],
     },
     {
       id: 13,
       images: [
-        { id: 25, src: "/images/ai-images/door-A-13.png", alt: "", note: "" },
+        {
+          id: 25,
+          src: "/images/ai-images/door-A-13.png",
+          alt: "",
+          note: "keep",
+        },
         { id: 26, src: "/images/real-images/door13.png", alt: "", note: "" },
       ],
     },

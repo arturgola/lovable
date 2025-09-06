@@ -114,7 +114,7 @@ const Index = () => {
             </div>
 
             {/* Aligned Description Section */}
-            <div className="max-w-5xl mx-auto space-y-8 md:space-y-12">
+            <div className="max-w-5xl mx-auto space-y-8 md:space-y-12 mb-12 md:mb-16">
               <div className="flex justify-center">
                 <div className="flex gap-4 md:gap-6 max-w-4xl">
                   <p className="text-sm w-12 text-right flex-shrink-0">
@@ -154,7 +154,7 @@ const Index = () => {
         </section>
 
         {/* Values Section */}
-        <section className="pt-6 md:pt-12 pb-10 md:pb-24 bg-white">
+        {/* <section className="pt-6 md:pt-12 pb-10 md:pb-24 bg-white">
           <div className="container-custom max-w-6xl mx-auto px-4">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-sm text-gray-500">
@@ -163,19 +163,19 @@ const Index = () => {
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight">
                 {t("designedWithPurpose")}
               </h3>
-            </div>
+            </div> */}
 
-            {/* Product Showcase Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        {/* Product Showcase Grid */}
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               <div>
                 <div className="aspect-[16/10] md:aspect-[16/10] bg-gray-100 rounded-2xl md:rounded-2xl overflow-hidden max-w-[92%] md:max-w-[85%] mx-auto">
                   <img
                     src="/images/ai-images/door-A-11-1.png"
                     className="w-full h-full object-cover"
                   />
-                </div>
-                {/* Description under image 1 */}
-                <div className="text-center mt-3">
+                </div> */}
+        {/* Description under image 1 */}
+        {/* <div className="text-center mt-3">
                   <p className="text-xs text-gray-400 mb-2">{t("section01")}</p>
                   <p className="text-base text-muted-foreground">
                     {t("craftedForDurability")}
@@ -188,9 +188,9 @@ const Index = () => {
                     src="/images/mainPicture-2.png"
                     className="w-full h-full object-cover"
                   />
-                </div>
-                {/* Description under image 2 */}
-                <div className="text-center mt-3">
+                </div> */}
+        {/* Description under image 2 */}
+        {/* <div className="text-center mt-3">
                   <p className="text-xs text-gray-400 mb-2">{t("section02")}</p>
                   <p className="text-base text-muted-foreground">
                     {t("sustainablePractices")}
@@ -203,9 +203,9 @@ const Index = () => {
                     src="/images/ai-images/door-A-5.png"
                     className="w-full h-full object-cover"
                   />
-                </div>
-                {/* Description under image 3 */}
-                <div className="text-center mt-3">
+                </div> */}
+        {/* Description under image 3 */}
+        {/* <div className="text-center mt-3">
                   <p className="text-xs text-gray-400 mb-2">{t("section03")}</p>
                   <p className="text-base text-muted-foreground">
                     {t("collaborateWithCommunities")}
@@ -214,7 +214,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Contact Form */}
         <section className="py-10 md:py-14 bg-background">

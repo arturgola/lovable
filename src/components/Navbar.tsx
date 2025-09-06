@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import "flag-icons/css/flag-icons.min.css";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -14,11 +15,17 @@ const Navbar = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Language data with flag-icons class and code
+  const languages = [
+    { code: "et", flag: "ee" },
+    { code: "en", flag: "gb" },
+    { code: "fi", flag: "fi" },
+  ];
+
   const toggleLanguage = () => {
-    const languages = ["et", "en", "fi"];
-    const currentIndex = languages.indexOf(i18n.language);
+    const currentIndex = languages.findIndex((l) => l.code === i18n.language);
     const nextIndex = (currentIndex + 1) % languages.length;
-    i18n.changeLanguage(languages[nextIndex]);
+    i18n.changeLanguage(languages[nextIndex].code);
   };
 
   const toggleMenu = () => {
@@ -40,7 +47,15 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-lg font-medium tracking-tight">
-              Askordoors
+              <div>
+                Askordoors
+                <div className="text-xs text-muted-foreground font-normal">
+                  askordoors@gmail.com
+                </div>
+                <div className="text-xs text-muted-foreground font-normal">
+                  +37256254169
+                </div>
+              </div>
             </Link>
           </div>
 
@@ -68,14 +83,24 @@ const Navbar = () => {
           {/* Language Toggle */}
           <div className="hidden md:flex items-center ml-auto">
             <Button variant="ghost" size="sm" onClick={toggleLanguage}>
-              {i18n.language.toUpperCase()}
+              <span
+                className={`fi fi-${
+                  languages.find((l) => l.code === i18n.language)?.flag || "xx"
+                }`}
+                style={{ fontSize: 24 }}
+              ></span>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center ml-auto">
             <Button variant="ghost" size="sm" onClick={toggleLanguage}>
-              {i18n.language.toUpperCase()}
+              <span
+                className={`fi fi-${
+                  languages.find((l) => l.code === i18n.language)?.flag || "xx"
+                }`}
+                style={{ fontSize: 24 }}
+              ></span>
             </Button>
             <Button variant="ghost" size="icon" onClick={toggleMenu}>
               <Menu className="h-5 w-5" />
