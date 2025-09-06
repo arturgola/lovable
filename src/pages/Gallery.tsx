@@ -16,138 +16,73 @@ const Gallery = () => {
     navigate("/");
   };
 
+  // Flatten all images into a single array
   const galleryImages = [
     {
       id: 1,
-      images: [
-        {
-          id: 1,
-          src: "/images/real-images/door1.png",
-          alt: "",
-          note: "keep, Ulkoovet",
-        },
-        { id: 2, src: "/images/ai-images/door-A-1.png", alt: "", note: "" },
-      ],
-    },
-    {
-      id: 2,
-      images: [
-        { id: 3, src: "/images/ai-images/door-A-2.png", alt: "", note: "" },
-        {
-          id: 4,
-          src: "/images/real-images/door2.png",
-          alt: "",
-          note: "keep, Sisäovet",
-        },
-      ],
-    },
-    {
-      id: 3,
-      images: [
-        {
-          id: 5,
-          src: "/images/real-images/door3.png",
-          alt: "",
-          note: "keep, Ulkoovet",
-        },
-        { id: 6, src: "/images/ai-images/door-A-3.png", alt: "", note: "" },
-      ],
+      src: "/images/real-images/door1.png",
+      alt: "",
+      note: "keep, Ulkoovet",
     },
     {
       id: 4,
-      images: [
-        {
-          id: 7,
-          src: "/images/ai-images/door-A-4.png",
-          alt: "",
-          note: "keep, Ulkoovet",
-        },
-        { id: 8, src: "/images/real-images/door4.jpg", alt: "", note: "" },
-      ],
+      src: "/images/real-images/door2.png",
+      alt: "",
+      note: "keep, Sisäovet",
     },
     {
       id: 5,
-      images: [
-        {
-          id: 9,
-          src: "/images/ai-images/door-A-5.png",
-          alt: "",
-          note: "keep, Sisäovet",
-        },
-        { id: 10, src: "/images/real-images/door5.jpg", alt: "", note: "" },
-      ],
-    },
-    {
-      id: 6,
-      images: [
-        { id: 11, src: "/images/real-images/door6.jpg", alt: "", note: "" },
-        {
-          id: 12,
-          src: "/images/ai-images/door-A-6.png",
-          alt: "",
-          note: "keep, Ulkoovet",
-        },
-      ],
+      src: "/images/real-images/door3.png",
+      alt: "",
+      note: "keep, Ulkoovet",
     },
     {
       id: 7,
-      images: [
-        {
-          id: 13,
-          src: "/images/ai-images/door-A-7.png",
-          alt: "",
-          note: "keep, but brighter, Ulkoovet",
-        },
-        { id: 14, src: "/images/real-images/door7.jpg", alt: "", note: "" },
-      ],
+      src: "/images/ai-images/door-A-4.png",
+      alt: "",
+      note: "keep, Ulkoovet",
     },
     {
       id: 9,
-      images: [
-        { id: 17, src: "/images/real-images/door9.png", alt: "", note: "" },
-        {
-          id: 18,
-          src: "/images/ai-images/door-A-9.png",
-          alt: "",
-          note: "ai, jos saisi oven kiinnitykset 3 saranalla, Ulkoovet",
-        },
-      ],
-    },
-    {
-      id: 11,
-      images: [
-        {
-          id: 21,
-          src: "/images/ai-images/door-A-11.png",
-          alt: "",
-          note: "keep, Ulkoovet",
-        },
-        { id: 22, src: "/images/real-images/door11.png", alt: "", note: "" },
-      ],
+      src: "/images/ai-images/door-A-5.png",
+      alt: "",
+      note: "keep, Sisäovet",
     },
     {
       id: 12,
-      images: [
-        {
-          id: 23,
-          src: "/images/real-images/door12.png",
-          alt: "",
-          note: "keep, Ulkoovet",
-        },
-        { id: 24, src: "/images/ai-images/door-A-12.png", alt: "", note: "" },
-      ],
+      src: "/images/ai-images/door-A-6.png",
+      alt: "",
+      note: "keep, Ulkoovet",
     },
     {
       id: 13,
-      images: [
-        {
-          id: 25,
-          src: "/images/ai-images/door-A-13.png",
-          alt: "",
-          note: "keep, Sisäovet",
-        },
-        { id: 26, src: "/images/real-images/door13.png", alt: "", note: "" },
-      ],
+      src: "/images/ai-images/door-A-7.png",
+      alt: "",
+      note: "keep, but brighter, Ulkoovet",
+    },
+    {
+      id: 18,
+      src: "/images/ai-images/door-A-9.png",
+      alt: "",
+      note: "ai, jos saisi oven kiinnitykset 3 saranalla, Ulkoovet",
+    },
+    {
+      id: 21,
+      src: "/images/ai-images/door-A-11.png",
+      alt: "",
+      note: "keep, Ulkoovet",
+    },
+    {
+      id: 23,
+      src: "/images/real-images/door12.png",
+      alt: "",
+      note: "keep, Ulkoovet",
+    },
+    {
+      id: 25,
+      src: "/images/ai-images/door-A-13.png",
+      alt: "",
+      note: "keep, Sisäovet",
     },
   ];
 
@@ -167,29 +102,7 @@ const Gallery = () => {
                 AI Enhanced
               </span>
             </div>
-            {/*             <p className="text-base md:text-lg text-muted-foreground">
-              Discover our collection of custom-crafted doors, each designed to enhance your living space with exceptional quality and timeless beauty. 
-              From contemporary designs to classic elegance, find the perfect door that reflects your personal style and complements your interior aesthetic.
-            </p> */}
           </div>
-
-          {/* <div className="max-w-4xl mx-auto mb-12 md:mb-16">
-            <div className="text-center">
-              <h2 className="text-lg md:text-xl font-normal tracking-tight text-foreground mb-4">
-                AI-Enhanced Visual Experience
-              </h2>
-              <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">
-                Our gallery showcases AI-enhanced images that demonstrate how our custom doors can transform various interior styles. 
-                Each image has been processed using advanced AI technology to improve clarity, lighting, and visual appeal, 
-                helping you envision the perfect door for your space.
-                <span className="inline-flex items-baseline gap-1 ml-2 px-1 py-0 bg-muted text-muted-foreground text-[9px] font-medium rounded-full leading-none">
-                  <span className="w-0.5 h-0.5 bg-foreground rounded-full"></span>
-                  AI Enhanced
-                </span>
-              </p>
-            </div>
-          </div> */}
-
           <div className="w-full">
             <ImageGallery images={galleryImages} />
           </div>

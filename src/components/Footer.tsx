@@ -11,11 +11,17 @@ const Footer = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
 
+  // Language data with flag-icons class and code
+  const languages = [
+    { code: "et", flag: "ee" },
+    { code: "en", flag: "gb" },
+    { code: "fi", flag: "fi" },
+  ];
+
   const toggleLanguage = () => {
-    const languages = ["et", "en", "fi"];
-    const currentIndex = languages.indexOf(i18n.language);
+    const currentIndex = languages.findIndex((l) => l.code === i18n.language);
     const nextIndex = (currentIndex + 1) % languages.length;
-    i18n.changeLanguage(languages[nextIndex]);
+    i18n.changeLanguage(languages[nextIndex].code);
   };
 
   const isActive = (path: string) => {
@@ -65,25 +71,25 @@ const Footer = () => {
 
           {/* Language Toggle */}
           <div className="hidden md:flex items-center ml-auto">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="h-8 px-2 text-xs"
-            >
-              {i18n.language.toUpperCase()}
+            <Button variant="ghost" size="sm" onClick={toggleLanguage}>
+              <span
+                className={`fi fi-${
+                  languages.find((l) => l.code === i18n.language)?.flag || "xx"
+                }`}
+                style={{ fontSize: "19.2px" }}
+              ></span>
             </Button>
           </div>
 
           {/* Mobile Navigation */}
           <div className="md:hidden flex items-center ml-auto">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="h-8 px-2 text-xs"
-            >
-              {i18n.language.toUpperCase()}
+            <Button variant="ghost" size="sm" onClick={toggleLanguage}>
+              <span
+                className={`fi fi-${
+                  languages.find((l) => l.code === i18n.language)?.flag || "xx"
+                }`}
+                style={{ fontSize: "19.2px" }}
+              ></span>
             </Button>
             <nav className="flex items-center space-x-4">
               <Link

@@ -11,80 +11,69 @@ interface Image {
   note?: string;
 }
 
-interface GalleryItem {
-  id: number;
-  images: Image[];
-}
-
 interface GalleryProps {
-  images: GalleryItem[];
+  images: Image[];
 }
 
 const ImageGallery = ({ images }: GalleryProps) => {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
-  const [selectedGalleryItem, setSelectedGalleryItem] = useState(0);
-  const [currentView, setCurrentView] = useState(0); // 0 = first image, 1 = second image
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openLightbox = (galleryItemIndex: number) => {
-    setSelectedGalleryItem(galleryItemIndex);
-    setCurrentView(0); // Reset to first image view
+  const openLightbox = (index: number) => {
+    setCurrentIndex(index);
     setOpen(true);
   };
 
-  // Create a custom lightbox with only 2 images and note
-  const createCustomLightbox = () => {
-    const currentGalleryItem = images[selectedGalleryItem];
-    const currentImage = currentGalleryItem.images[0];
-    const nextImage = currentGalleryItem.images[1];
+  const closeLightbox = () => {
+    setOpen(false);
+  };
 
-    // Determine which image to show based on currentView
-    const displayImage = currentView === 0 ? currentImage : nextImage;
-    const displayNote = currentView === 0 ? currentImage.note : nextImage.note;
+  const showPrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
 
+  const showNext = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  const createLightbox = () => {
+    const img = images[currentIndex];
     return (
       <div className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4">
         <button
-          onClick={() => setOpen(false)}
+          onClick={closeLightbox}
           className="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition-colors"
         >
           ✕
         </button>
-        
+        <button
+          onClick={showPrev}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-3xl text-gray-400 hover:text-white transition-colors"
+        >
+          ‹
+        </button>
         <div className="flex flex-col items-center max-w-4xl w-full">
-          {/* Single Image */}
           <div className="flex flex-col items-center">
             <div className="relative mb-6">
               <img
-                src={displayImage.src}
-                alt={displayImage.alt}
+                src={img.src}
+                alt={img.alt}
                 className="max-w-full max-h-[70vh] object-contain rounded-lg"
               />
             </div>
-            {displayNote && (
+            {img.note && (
               <div className="text-center max-w-2xl">
                 <p className="text-white text-base md:text-lg leading-relaxed">
-                  {displayNote}
+                  {img.note}
                 </p>
               </div>
             )}
           </div>
         </div>
-
-        {/* Navigation arrows - scroll between the 2 images */}
         <button
-          onClick={() => setCurrentView(0)}
-          className={`absolute left-4 top-1/2 transform -translate-y-1/2 text-3xl transition-colors ${
-            currentView === 0 ? 'text-white' : 'text-gray-400 hover:text-white'
-          }`}
-        >
-          ‹
-        </button>
-        <button
-          onClick={() => setCurrentView(1)}
-          className={`absolute right-4 top-1/2 transform -translate-y-1/2 text-3xl transition-colors ${
-            currentView === 1 ? 'text-white' : 'text-gray-400 hover:text-white'
-          }`}
+          onClick={showNext}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-3xl text-gray-400 hover:text-white transition-colors"
         >
           ›
         </button>
@@ -95,24 +84,23 @@ const ImageGallery = ({ images }: GalleryProps) => {
   return (
     <div className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        {images.map((galleryItem, i) => (
-          <div 
-            key={galleryItem.id}
+        {images.map((img, i) => (
+          <div
+            key={img.id}
             className="overflow-hidden rounded-2xl bg-gray-100 cursor-pointer hover:opacity-90 transition-opacity group"
             onClick={() => openLightbox(i)}
           >
-            <AspectRatio ratio={4/3} className="bg-gray-100">
+            <AspectRatio ratio={4 / 3} className="bg-gray-100">
               <img
-                src={galleryItem.images[0].src}
-                alt={galleryItem.images[0].alt}
+                src={img.src}
+                alt={img.alt}
                 className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
             </AspectRatio>
           </div>
         ))}
       </div>
-
-      {open && createCustomLightbox()}
+      {open && createLightbox()}
     </div>
   );
 };
