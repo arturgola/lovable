@@ -56,13 +56,13 @@ const Gallery = () => {
     },
     {
       id: 13,
-      src: "/images/ai-images/door-A-7.png",
+      src: "/images/ai-images/door-A-7-2.png",
       alt: "",
       note: "keep, but brighter, Ulkoovet",
     },
     {
       id: 18,
-      src: "/images/ai-images/door-A-9.png",
+      src: "/images/ai-images/door-A-9-2.png",
       alt: "",
       note: "ai, jos saisi oven kiinnitykset 3 saranalla, Ulkoovet",
     },
@@ -80,7 +80,7 @@ const Gallery = () => {
     },
     {
       id: 25,
-      src: "/images/ai-images/door-A-13.png",
+      src: "/images/ai-images/door-A-13-2.png",
       alt: "",
       note: "keep, Sisäovet",
     },
