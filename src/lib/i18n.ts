@@ -12,12 +12,11 @@ const resources = {
       // Main page
       aboutTitle: "Askordoors OÜ",
       aboutDescription:
-        "Me valmistame ja paigaldame kõrgekvaliteetseid eritellimusel uksed. Meie tooted on valmistatud parimatest saadaolevatest materjalidest ja kogenud käsitööliste poolt.",
-      learnMore: "Loe rohkem",
+        "Askordoors OÜ valmistab ja paigaldab kõrgekvaliteedilisi eritellimusel uksi. Meie tooted valmivad parimatest saadaolevatest materjalidest ning kogenud meistrite käe all.",
       artistPlatform:
-        "<strong>Me pakume laia valikut uksed</strong>: välisuksed majadele, välisuksed korteritele, välisuksed kortermajadele, välisuksed külgpaneelidega, pärandkaitse uksed, välisuksed ajalooliselt või keskkonnalt väärtuslikele hoonetele, kahelehelised uksed ja palju muud",
+        "<strong>Pakume laia valikut uksi</strong>: maja välisuksed, korteri välisuksed, kortermajade välisuksed, laiendiga välisuksed, muinsuskaitse uksed, välisuksed miljööväärtuslikule hoonele, kahepoolsed paarisuksed ning palju muud.",
       uniqueMaterials:
-        "Kõik uksed valmistatakse vastavalt teie soovidele – võite saata meile foto (nt olemasolevast uksest), lingi internetist või lihtsalt kirjelduse soovitud ukse tüübist. <strong>Tarneaeg on 3–5 nädalat pärast 50% ettemaksu</strong>.",
+        "Kõiki uksi valmistame vastavalt Sinu soovile – võid saata foto (nt olemasolevast uksest), internetilingi või lihtsalt kirjelduse soovitud uksetüübist. Uste disaini saab kasutada välis- ja siseustel. <strong>Tarneaeg on 3–5 nädalat pärast 50% ettemaksu tasumist</strong>.",
 
       // Gallery
       galleryTitle: "Meie tööd",
@@ -25,8 +24,7 @@ const resources = {
 
       // Contact form
       contactTitle: "Võtke meiega ühendust",
-      contactDescription:
-        "Täitke allolev vorm ja me võtame teiega peagi ühendust",
+      contactDescription: "Sobiva mõõdu ja tooni jaoks - Küsi pakkumist siit:",
       name: "Nimi",
       email: "E-post",
       phone: "Telefon",
@@ -60,15 +58,12 @@ const resources = {
       furnitureWithValue: "Toode väärtusega",
       designedWithPurpose: "Disainitud eesmärgiga",
       ecoFriendlyDescription: "Avastage stiilsed uksed kaasaegseks eluks",
-      ecoFriendlyBrand: "KOHALIK BRÄND",
       galleryButton: "GALERII →",
       contactButton: "KONTAKT →",
-      craftedForDurability: "Massiivpuit, siseuks",
-      sustainablePractices: "Massiivpuit, paksus 43 mm",
-      collaborateWithCommunities: "Männipuit ja HDF, 43 mm",
       section01: "01",
       section02: "02",
       section03: "03",
+      speakDirectly: "Võtke meiega otse ühendust:",
     },
   },
   en: {
@@ -81,12 +76,11 @@ const resources = {
       // Main page
       aboutTitle: "Askordoors OÜ",
       aboutDescription:
-        "We manufacture and install high-quality custom-made doors. Our products are crafted from the finest materials available and by the hands of experienced craftsmen.",
-      learnMore: "Learn more",
+        "Askordoors OÜ manufactures and installs high-quality custom-made doors. Our products are crafted from the finest materials available and by the hands of experienced craftsmen.",
       artistPlatform:
-        "<strong>We offer a wide range of doors</strong>: exterior doors for houses, exterior doors for apartments, exterior doors for apartment buildings, exterior doors with side panels, heritage conservation doors, exterior doors for buildings of historical or environmental value, double-leaf doors and much more",
+        "<strong>We offer a wide range of doors</strong>: exterior doors for houses, exterior doors for apartments, exterior doors for apartment buildings, exterior doors with side panels, heritage conservation doors, exterior doors for buildings of historical or environmental value, double-leaf doors, and much more.",
       uniqueMaterials:
-        "All doors are made according to your wishes – you can send us a photo (e.g., of an existing door), a link from the internet, or simply a description of the desired door type. <strong>Delivery time is 3–5 weeks after a 50% prepayment</strong>.",
+        "All doors are made according to your wishes – you can send us a photo (e.g., of an existing door), a link from the internet, or simply a description of the desired door type. The design of doors can be used for exterior and interior doors. <strong>Delivery time is 3–5 weeks after a 50% prepayment</strong>.",
 
       // Gallery
       galleryTitle: "Our Work",
@@ -95,7 +89,7 @@ const resources = {
       // Contact form
       contactTitle: "Get in Touch",
       contactDescription:
-        "Fill out the form below and we'll get back to you shortly",
+        "For the right size and shade – Request an offer here:",
       name: "Name",
       email: "Email",
       phone: "Phone",
@@ -129,15 +123,12 @@ const resources = {
       furnitureWithValue: "Product with Value",
       designedWithPurpose: "Designed with Purpose",
       ecoFriendlyDescription: "Discover stylish doors for modern living",
-      ecoFriendlyBrand: "LOCAL BRAND",
       galleryButton: "GALLERY →",
       contactButton: "CONTACT →",
-      craftedForDurability: "Solid wood, interior door",
-      sustainablePractices: "Solid wood, thickness 43 mm",
-      collaborateWithCommunities: "Pine wood and HDF, 43 mm",
       section01: "01",
       section02: "02",
       section03: "03",
+      speakDirectly: "Speak with us directly:",
     },
   },
   fi: {
@@ -150,21 +141,20 @@ const resources = {
       // Main page
       aboutTitle: "Askordoors OÜ",
       aboutDescription:
-        "Valmistamme ja asennamme korkealaatuisia mittatilausovia. Tuotteemme on valmistettu parhaista saatavilla olevista materiaaleista ja kokeneiden käsityöläisten toimesta.",
-      learnMore: "Lue lisää",
+        "Askordoors OÜ valmistaa ja asentaa korkealaatuisia mittatilausovia. Tuotteemme valmistetaan parhaista saatavilla olevista materiaaleista kokeneiden mestareiden käsissä.",
       artistPlatform:
-        "<strong>Tarjoamme laajan valikoiman ovia</strong>: ulko-ovia taloihin, ulko-ovia asuntoihin, ulko-ovia kerrostaloihin, ulko-ovia sivupaneeleilla, suojelukohteiden ovia, ulko-ovia historiallisesti tai ympäristöllisesti arvokkaisiin rakennuksiin, kaksilehtisiä ovia ja paljon muuta",
+        "<strong>Tarjoamme laajan valikoiman ovia</strong>: omakotitalon ulko-ovet, kerrostalon ulko-ovet, asuinkerrostalojen ulko-ovet, laajennetut ulko-ovet, suojellun rakennuksen ovet (räätälöidyt ovet, rakennusperintölailla suojellut ovet), ovet rakennuksiin, joilla on kulttuurihistoriallista arvoa, kaksiosaiset pariovet ja paljon muuta.",
       uniqueMaterials:
-        "Kaikki ovet valmistetaan toiveidesi mukaan – voit lähettää meille valokuvan (esim. olemassa olevasta ovesta), linkin internetistä tai yksinkertaisesti kuvauksen halutusta ovityypistä. <strong>Toimitusaika on 3–5 viikkoa 50 % ennakkomaksun jälkeen</strong>.",
+        "Kaikki ovet valmistetaan toiveidesi mukaan – voit lähettää valokuvan (esim. vanhasta ovesta), linkin internetistä tai yksinkertaisesti kuvauksen haluamastasi ovimallista. Ovien suunnittelua voidaan käyttää ulko- ja sisäovissa. <strong>Toimitusaika on 3–5 viikkoa 50 % ennakkomaksun jälkeen</strong>.",
 
       // Gallery
-      galleryTitle: "Työmme",
+      galleryTitle: "Meidän työ",
       galleryDescription: "Tutustu viimeisimpien projektien galleriaan",
 
       // Contact form
       contactTitle: "Ota yhteyttä",
       contactDescription:
-        "Täytä alla oleva lomake, niin otamme sinuun pian yhteyttä",
+        "Sopivaa kokoa ja sävyä varten - Pyydä tarjous täältä:",
       name: "Nimi",
       email: "Sähköposti",
       phone: "Puhelin",
@@ -198,15 +188,12 @@ const resources = {
       furnitureWithValue: "Tuote, jolla on arvoa",
       designedWithPurpose: "Suunniteltu tarkoituksella",
       ecoFriendlyDescription: "Tutustu tyylikkäisiin oviin moderniin elämään",
-      ecoFriendlyBrand: "PAIKALLINEN MERKKI",
       galleryButton: "GALLERIA →",
       contactButton: "YHTEYS →",
-      craftedForDurability: "Massiivipuuta, sisäovi",
-      sustainablePractices: "Massiivipuuta, paksuus 43 mm",
-      collaborateWithCommunities: "Mäntyä ja HDF:ää, 43 mm",
       section01: "01",
       section02: "02",
       section03: "03",
+      speakDirectly: "Ota meihin yhteyttä suoraan:",
     },
   },
 };

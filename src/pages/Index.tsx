@@ -67,11 +67,11 @@ const Index = () => {
                 <p className="text-sm text-gray-600 max-w-none md:max-w-xs text-center md:text-left">
                   {t("ecoFriendlyDescription")}
                 </p>
-                <div className="mt-1 md:mt-0 text-center md:text-right">
+                {/*                 <div className="mt-1 md:mt-0 text-center md:text-right">
                   <p className="text-xs text-gray-500 uppercase tracking-wider">
                     {t("ecoFriendlyBrand")}
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -114,7 +114,7 @@ const Index = () => {
             </div>
 
             {/* Aligned Description Section */}
-            <div className="max-w-5xl mx-auto space-y-8 md:space-y-12 mb-12 md:mb-16">
+            <div className="max-w-5xl mx-auto space-y-5 md:space-y-7 mb-7 md:mb-10">
               <div className="flex justify-center">
                 <div className="flex gap-4 md:gap-6 max-w-4xl">
                   <p className="text-sm w-12 text-right flex-shrink-0">
@@ -217,7 +217,7 @@ const Index = () => {
         </section> */}
 
         {/* Contact Form */}
-        <section className="py-10 md:py-14 bg-background">
+        <section className="py-6 md:py-9 bg-background">
           <div className="container-custom">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -238,7 +238,7 @@ const Index = () => {
               {/* Phone consultation note outside the form box */}
               <div className="mt-4 ml-auto max-w-md">
                 <p className="text-sm text-muted-foreground text-right">
-                  {" "}
+                  {t("speakDirectly")}{" "}
                   <a
                     href="tel:+37256254169"
                     className="font-bold text-foreground hover:underline"
