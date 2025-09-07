@@ -21,6 +21,19 @@ const resources = {
       // Gallery
       galleryTitle: "Meie tööd",
       galleryDescription: "Vaadake meie hiljutiste projektide galeriid",
+      galleryNotes: {
+        door1: "Välisuks, nr 1001",
+        door2: "Siseuks, nr 2001",
+        door3: "Välisuks, nr 1002",
+        doorA4: "Välisuks, nr 1003",
+        doorA5: "Siseuks, nr 2002",
+        doorA6: "Välisuks, nr 1004",
+        doorA7_2: "Välisuks, nr 1005",
+        doorA9_2: "Välisuks, nr 1006",
+        doorA11: "Välisuks, nr 1007",
+        door12: "Välisuks, nr 1008",
+        doorA13_2: "Siseuks, nr 2003",
+      },
 
       // Contact form
       contactTitle: "Võtke meiega ühendust",
@@ -85,6 +98,19 @@ const resources = {
       // Gallery
       galleryTitle: "Our Work",
       galleryDescription: "Browse our gallery of recent projects",
+      galleryNotes: {
+        door1: "Exterior door, no. 1001",
+        door2: "Interior door, no. 2001",
+        door3: "Exterior door, no. 1002",
+        doorA4: "Exterior door, no. 1003",
+        doorA5: "Interior door, no. 2002",
+        doorA6: "Exterior door, no. 1004",
+        doorA7_2: "Exterior door, no. 1005",
+        doorA9_2: "Exterior door, no. 1006",
+        doorA11: "Exterior door, no. 1007",
+        door12: "Exterior door, no. 1008",
+        doorA13_2: "Interior door, no. 2003",
+      },
 
       // Contact form
       contactTitle: "Get in Touch",
@@ -150,6 +176,19 @@ const resources = {
       // Gallery
       galleryTitle: "Meidän työ",
       galleryDescription: "Tutustu viimeisimpien projektien galleriaan",
+      galleryNotes: {
+        door1: "Ulko-ovi, nro 1001",
+        door2: "Sisäovi, nro 2001",
+        door3: "Ulko-ovi, nro 1002",
+        doorA4: "Ulko-ovi, nro 1003",
+        doorA5: "Sisäovi, nro 2002",
+        doorA6: "Ulko-ovi, nro 1004",
+        doorA7_2: "Ulko-ovi, nro 1005",
+        doorA9_2: "Ulko-ovi, nro 1006",
+        doorA11: "Ulko-ovi, nro 1007",
+        door12: "Ulko-ovi, nro 1008",
+        doorA13_2: "Sisäovi, nro 2003",
+      },
 
       // Contact form
       contactTitle: "Ota yhteyttä",

@@ -78,7 +78,7 @@ const Index = () => {
             <div className="relative mb-4">
               <div className="aspect-[16/10] bg-gray-100 rounded-2xl overflow-hidden">
                 <img
-                  src="/images/mainPicture.png"
+                  src="/images/mainPicture-3.png"
                   className="w-full h-full object-cover"
                 />
               </div>
