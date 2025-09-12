@@ -4,6 +4,8 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   et: {
     translation: {
+      interiorTitle: "Siseuksed",
+      exteriorTitle: "Välisuksed",
       // Navigation
       mainPage: "Avaleht",
       gallery: "Galerii",
@@ -81,6 +83,8 @@ const resources = {
   },
   en: {
     translation: {
+      interiorTitle: "Interior Doors",
+      exteriorTitle: "Exterior Doors",
       // Navigation
       mainPage: "Home",
       gallery: "Gallery",
@@ -159,6 +163,8 @@ const resources = {
   },
   fi: {
     translation: {
+      interiorTitle: "Sisäovet",
+      exteriorTitle: "Ulko-ovet",
       // Navigation
       mainPage: "Etusivu",
       gallery: "Galleria",

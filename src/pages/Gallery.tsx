@@ -16,19 +16,13 @@ const Gallery = () => {
     navigate("/");
   };
 
-  // Flatten all images into a single array
-  const galleryImages = [
+  // Separate images into exterior and interior arrays
+  const exteriorImages = [
     {
       id: 1,
       src: "/images/real-images/door1.png",
       alt: "",
       note: t("galleryNotes.door1"),
-    },
-    {
-      id: 4,
-      src: "/images/real-images/door2.png",
-      alt: "",
-      note: t("galleryNotes.door2"),
     },
     {
       id: 5,
@@ -37,16 +31,16 @@ const Gallery = () => {
       note: t("galleryNotes.door3"),
     },
     {
+      id: 23,
+      src: "/images/real-images/door12.png",
+      alt: "",
+      note: t("galleryNotes.door12"),
+    },
+    {
       id: 7,
       src: "/images/ai-images/door-A-4.png",
       alt: "",
       note: t("galleryNotes.doorA4"),
-    },
-    {
-      id: 9,
-      src: "/images/ai-images/door-A-5.png",
-      alt: "",
-      note: t("galleryNotes.doorA5"),
     },
     {
       id: 12,
@@ -72,11 +66,20 @@ const Gallery = () => {
       alt: "",
       note: t("galleryNotes.doorA11"),
     },
+  ];
+
+  const interiorImages = [
     {
-      id: 23,
-      src: "/images/real-images/door12.png",
+      id: 9,
+      src: "/images/ai-images/door-A-5.png",
       alt: "",
-      note: t("galleryNotes.door12"),
+      note: t("galleryNotes.doorA5"),
+    },
+    {
+      id: 4,
+      src: "/images/real-images/door2.png",
+      alt: "",
+      note: t("galleryNotes.door2"),
     },
     {
       id: 25,
@@ -104,7 +107,22 @@ const Gallery = () => {
             </div>
           </div>
           <div className="w-full">
-            <ImageGallery images={galleryImages} />
+            <div className="text-center mb-8">
+              <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end gap-3 md:gap-0 max-w-4xl mx-auto">
+                <p className="text-sm text-gray-600 max-w-none md:max-w-xs text-center md:text-left">
+                  {t("interiorTitle", { defaultValue: "Interior" })}
+                </p>
+              </div>
+            </div>
+            <ImageGallery images={interiorImages} />
+            <div className="text-center mt-16 mb-8">
+              <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end gap-3 md:gap-0 max-w-4xl mx-auto">
+                <p className="text-sm text-gray-600 max-w-none md:max-w-xs text-center md:text-left">
+                  {t("exteriorTitle", { defaultValue: "Exterior" })}
+                </p>
+              </div>
+            </div>
+            <ImageGallery images={exteriorImages} />
           </div>
 
           {/* Contact Button - After Gallery in Right Corner */}
