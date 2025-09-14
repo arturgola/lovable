@@ -107,30 +107,23 @@ const Index = () => {
         <section className="pt-6 md:pt-12 pb-6 md:pb-8">
           <div className="container-custom max-w-6xl mx-auto">
             <div className="text-center mb-12 md:mb-16">
-              <p className="text-sm">{t("sectionA")}</p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight">
                 {t("aboutTitle")}
               </h1>
             </div>
 
             {/* Aligned Description Section */}
-            <div className="max-w-5xl mx-auto space-y-5 md:space-y-7 mb-7 md:mb-10">
+            <div className="max-w-5xl mx-auto space-y-5 md:space-y-7 mb-7 md:mb-10 text-center">
               <div className="flex justify-center">
-                <div className="flex gap-4 md:gap-6 max-w-4xl">
-                  <p className="text-sm w-12 text-right flex-shrink-0">
-                    {t("section01")}
-                  </p>
-                  <p className="text-base text-muted-foreground">
+                <div className="flex gap-4 md:gap-6 max-w-4xl w-full justify-center">
+                  <p className="text-base text-muted-foreground w-full text-center">
                     {t("aboutDescription")}
                   </p>
                 </div>
               </div>
               <div className="flex justify-center">
-                <div className="flex gap-4 md:gap-6 max-w-4xl">
-                  <p className="text-sm w-12 text-right flex-shrink-0">
-                    {t("section02")}
-                  </p>
-                  <p className="text-base text-muted-foreground">
+                <div className="flex gap-4 md:gap-6 max-w-4xl w-full justify-center">
+                  <p className="text-base text-muted-foreground w-full text-center">
                     <span
                       dangerouslySetInnerHTML={{ __html: t("artistPlatform") }}
                     />
@@ -138,11 +131,8 @@ const Index = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <div className="flex gap-4 md:gap-6 max-w-4xl">
-                  <p className="text-sm w-12 text-right flex-shrink-0">
-                    {t("section03")}
-                  </p>
-                  <p className="text-base text-muted-foreground">
+                <div className="flex gap-4 md:gap-6 max-w-4xl w-full justify-center">
+                  <p className="text-base text-muted-foreground w-full text-center">
                     <span
                       dangerouslySetInnerHTML={{ __html: t("uniqueMaterials") }}
                     />
