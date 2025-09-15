@@ -22,10 +22,10 @@ const Navbar = () => {
     { code: "fi", flag: "fi" },
   ];
 
-  const toggleLanguage = () => {
-    const currentIndex = languages.findIndex((l) => l.code === i18n.language);
-    const nextIndex = (currentIndex + 1) % languages.length;
-    i18n.changeLanguage(languages[nextIndex].code);
+  const handleLanguageChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    i18n.changeLanguage(event.target.value);
   };
 
   const toggleMenu = () => {
@@ -80,36 +80,66 @@ const Navbar = () => {
             </Link>
           </nav>
 
-          {/* Language Toggle */}
+          {/* Language Dropdown */}
           <div className="hidden md:flex items-center ml-auto">
-            <Button variant="ghost" size="sm" onClick={toggleLanguage}>
-              <span
-                className={`fi fi-${
-                  languages.find((l) => l.code === i18n.language)?.flag || "xx"
-                }`}
-                style={{
-                  fontSize: 24,
-                  border: "1px solid #f5f5f5",
-                  boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
-                }}
-              ></span>
-            </Button>
+            <select
+              value={i18n.language}
+              onChange={handleLanguageChange}
+              className="bg-transparent border-none text-xs cursor-pointer focus:outline-none"
+              style={{ minWidth: "40px" }}
+            >
+              {languages.map((lang) => (
+                <option
+                  key={lang.code}
+                  value={lang.code}
+                  className={`fi fi-${lang.flag}`}
+                >
+                  {lang.code.toUpperCase()}
+                </option>
+              ))}
+            </select>
+            <span
+              className={`fi fi-${
+                languages.find((l) => l.code === i18n.language)?.flag || "xx"
+              }`}
+              style={{
+                fontSize: 24,
+                marginLeft: "8px",
+                border: "1px solid #f5f5f5",
+                boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
+              }}
+            ></span>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center ml-auto">
-            <Button variant="ghost" size="sm" onClick={toggleLanguage}>
-              <span
-                className={`fi fi-${
-                  languages.find((l) => l.code === i18n.language)?.flag || "xx"
-                }`}
-                style={{
-                  fontSize: 24,
-                  border: "1px solid #f5f5f5",
-                  boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
-                }}
-              ></span>
-            </Button>
+            <select
+              value={i18n.language}
+              onChange={handleLanguageChange}
+              className="bg-transparent border-none text-xs cursor-pointer focus:outline-none"
+              style={{ minWidth: "40px" }}
+            >
+              {languages.map((lang) => (
+                <option
+                  key={lang.code}
+                  value={lang.code}
+                  className={`fi fi-${lang.flag}`}
+                >
+                  {lang.code.toUpperCase()}
+                </option>
+              ))}
+            </select>
+            <span
+              className={`fi fi-${
+                languages.find((l) => l.code === i18n.language)?.flag || "xx"
+              }`}
+              style={{
+                fontSize: 24,
+                marginLeft: "8px",
+                border: "1px solid #f5f5f5",
+                boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
+              }}
+            ></span>
             <Button variant="ghost" size="icon" onClick={toggleMenu}>
               <Menu className="h-5 w-5" />
             </Button>
