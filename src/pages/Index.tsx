@@ -105,7 +105,7 @@ const Index = () => {
 
         {/* Hero Section */}
         <section className="pt-6 md:pt-12 pb-6 md:pb-8">
-          <div className="container-custom max-w-6xl mx-auto">
+          <div className="container-custom max-w-4xl md:max-w-2xl mx-auto">
             <div className="text-center mb-12 md:mb-16">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight">
                 {t("aboutTitle")}
@@ -113,31 +113,27 @@ const Index = () => {
             </div>
 
             {/* Aligned Description Section */}
-            <div className="max-w-5xl mx-auto space-y-5 md:space-y-7 mb-7 md:mb-10 text-center">
-              <div className="flex justify-center">
-                <div className="flex gap-4 md:gap-6 max-w-4xl w-full justify-center">
-                  <p className="text-base text-muted-foreground w-full text-center">
-                    {t("aboutDescription")}
-                  </p>
-                </div>
+            <div className="space-y-5 md:space-y-7 mb-7 md:mb-10 text-center">
+              <div>
+                <p className="text-base text-muted-foreground">
+                  <span
+                    dangerouslySetInnerHTML={{ __html: t("aboutDescription") }}
+                  />
+                </p>
               </div>
-              <div className="flex justify-center">
-                <div className="flex gap-4 md:gap-6 max-w-4xl w-full justify-center">
-                  <p className="text-base text-muted-foreground w-full text-center">
-                    <span
-                      dangerouslySetInnerHTML={{ __html: t("artistPlatform") }}
-                    />
-                  </p>
-                </div>
+              <div>
+                <p className="text-base text-muted-foreground">
+                  <span
+                    dangerouslySetInnerHTML={{ __html: t("artistPlatform") }}
+                  />
+                </p>
               </div>
-              <div className="flex justify-center">
-                <div className="flex gap-4 md:gap-6 max-w-4xl w-full justify-center">
-                  <p className="text-base text-muted-foreground w-full text-center">
-                    <span
-                      dangerouslySetInnerHTML={{ __html: t("uniqueMaterials") }}
-                    />
-                  </p>
-                </div>
+              <div>
+                <p className="text-base text-muted-foreground">
+                  <span
+                    dangerouslySetInnerHTML={{ __html: t("uniqueMaterials") }}
+                  />
+                </p>
               </div>
             </div>
           </div>
