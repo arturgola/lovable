@@ -8,14 +8,12 @@ import { Textarea } from "@/components/ui/textarea";
 interface FormValues {
   name: string;
   email: string;
-  // ...existing code...
   message: string;
 }
 
 interface FormErrors {
   name?: string;
   email?: string;
-  // ...existing code...
   message?: string;
 }
 
@@ -40,7 +38,6 @@ const ContactForm = () => {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
       newErrors.email = t("emailInvalid");
     }
-    // ...existing code...
     if (!values.message.trim()) {
       newErrors.message = t("messageRequired");
     }
@@ -68,7 +65,6 @@ const ContactForm = () => {
       const form = e.currentTarget;
       const formData = new FormData(form);
 
-      // Add the form-name field required by Netlify
       formData.append("form-name", "contact");
 
       const response = await fetch("/", {
@@ -83,7 +79,6 @@ const ContactForm = () => {
           description: "",
         });
 
-        // Reset form values
         setValues({
           name: "",
           email: "",
@@ -149,8 +144,6 @@ const ContactForm = () => {
           <p className="text-xs text-destructive mt-1">{errors.email}</p>
         )}
       </div>
-
-      {/* Phone input removed */}
 
       <div>
         <Textarea

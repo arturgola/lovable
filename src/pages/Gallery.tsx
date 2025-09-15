@@ -10,13 +10,10 @@ const Gallery = () => {
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    // Set a flag to preserve scroll position
     sessionStorage.setItem("preserveScroll", "true");
-    // Navigate to index page
     navigate("/");
   };
 
-  // Separate images into exterior and interior arrays
   const exteriorImages = [
     {
       id: 1,
@@ -125,7 +122,7 @@ const Gallery = () => {
             <ImageGallery images={exteriorImages} />
           </div>
 
-          {/* Contact Button - After Gallery in Right Corner */}
+          {/* Contact Button */}
           <div className="flex justify-end mt-8">
             <Button
               variant="outline"

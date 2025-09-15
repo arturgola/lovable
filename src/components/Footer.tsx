@@ -4,14 +4,12 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
-  // Scroll to top when navigating to Gallery
   const handleGalleryClick = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   };
   const { t, i18n } = useTranslation();
   const location = useLocation();
 
-  // Language data with flag-icons class and code
   const languages = [
     { code: "et", flag: "ee" },
     { code: "en", flag: "gb" },
@@ -29,7 +27,6 @@ const Footer = () => {
   };
 
   const handleHomeClick = () => {
-    // Scroll to top of the page
     window.scrollTo({
       top: 0,
       left: 0,
@@ -41,7 +38,6 @@ const Footer = () => {
     <footer className="border-t border-border py-4 bg-background">
       <div className="container-custom">
         <div className="relative flex flex-col md:flex-row items-center w-full md:h-12">
-          {/* Contact Info - visible on all devices */}
           <div className="flex flex-col items-center md:items-start md:mr-6">
             <span className="text-sm text-gray-600 max-w-none text-center md:text-left">
               askordoors@gmail.com
@@ -50,7 +46,6 @@ const Footer = () => {
               +37256254169
             </span>
           </div>
-          {/* Centered Nav */}
           <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center space-x-6">
             <Link
               to="/"
@@ -102,7 +97,7 @@ const Footer = () => {
             ></span>
           </div>
 
-          {/* Mobile Navigation - all elements in one centered row except contact info */}
+          {/* Mobile Navigation */}
           <div className="md:hidden flex flex-row items-center justify-center w-full gap-6 mt-2">
             <div className="flex items-center gap-2">
               <select

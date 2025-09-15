@@ -11,16 +11,13 @@ const Index = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Scroll to contact section if preserveScroll flag is set
   React.useEffect(() => {
     if (sessionStorage.getItem("preserveScroll")) {
       sessionStorage.removeItem("preserveScroll");
-      // Scroll to the contact section at the bottom of the page
       const contactSection = document.querySelector("section.bg-background");
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
       } else {
-        // fallback: scroll to bottom
         window.scrollTo({
           top: document.body.scrollHeight,
           behavior: "smooth",
@@ -30,18 +27,15 @@ const Index = () => {
   }, []);
 
   const handleGalleryClick = () => {
-    // Immediately scroll to top before navigation
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: "instant",
     });
-    // Navigate to gallery
     navigate("/gallery");
   };
 
   const handleContactClick = () => {
-    // Scroll to the contact form section at the bottom of the page
     const contactSection = document.querySelector(
       "section:has(.bg-background)"
     );
@@ -61,17 +55,12 @@ const Index = () => {
         {/* Main Product Image */}
         <section className="pt-12 md:pt-24 pb-6 md:pb-8 bg-white">
           <div className="container-custom max-w-7xl mx-auto px-4">
-            {/* Text above image (from Index copy) */}
+            {/* Text above image */}
             <div className="text-center mb-8">
               <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end gap-3 md:gap-0 max-w-4xl mx-auto">
                 <p className="text-sm text-gray-600 max-w-none md:max-w-xs text-center md:text-left">
                   {t("ecoFriendlyDescription")}
                 </p>
-                {/*                 <div className="mt-1 md:mt-0 text-center md:text-right">
-                  <p className="text-xs text-gray-500 uppercase tracking-wider">
-                    {t("ecoFriendlyBrand")}
-                  </p>
-                </div> */}
               </div>
             </div>
 
@@ -158,7 +147,6 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Phone consultation note outside the form box */}
               <div className="mt-4 ml-auto max-w-md">
                 <p className="text-sm text-muted-foreground text-right">
                   {t("speakDirectly")}{" "}
@@ -170,7 +158,6 @@ const Index = () => {
                   </a>
                 </p>
               </div>
-              {/* Add extra spacing before footer */}
               <div className="mb-8" />
             </div>
           </div>

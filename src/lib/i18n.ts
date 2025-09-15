@@ -69,15 +69,11 @@ const resources = {
       language: "Keel",
 
       // New translations from Index.tsx
-      sectionA: "(A)",
       furnitureWithValue: "Toode väärtusega",
       designedWithPurpose: "Disainitud eesmärgiga",
       ecoFriendlyDescription: "Avastage stiilsed uksed kaasaegseks eluks",
       galleryButton: "GALERII →",
       contactButton: "KONTAKT →",
-      section01: "01",
-      section02: "02",
-      section03: "03",
       speakDirectly: "Võtke meiega otse ühendust:",
     },
   },
@@ -149,15 +145,11 @@ const resources = {
       language: "Language",
 
       // New translations from Index.tsx
-      sectionA: "(A)",
       furnitureWithValue: "Product with Value",
       designedWithPurpose: "Designed with Purpose",
       ecoFriendlyDescription: "Discover stylish doors for modern living",
       galleryButton: "GALLERY →",
       contactButton: "CONTACT →",
-      section01: "01",
-      section02: "02",
-      section03: "03",
       speakDirectly: "Speak with us directly:",
     },
   },
@@ -229,15 +221,11 @@ const resources = {
       language: "Kieli",
 
       // New translations from Index.tsx
-      sectionA: "(A)",
       furnitureWithValue: "Tuote, jolla on arvoa",
       designedWithPurpose: "Suunniteltu tarkoituksella",
       ecoFriendlyDescription: "Tutustu tyylikkäisiin oviin moderniin elämään",
       galleryButton: "GALLERIA →",
       contactButton: "YHTEYS →",
-      section01: "01",
-      section02: "02",
-      section03: "03",
       speakDirectly: "Ota meihin yhteyttä suoraan:",
     },
   },

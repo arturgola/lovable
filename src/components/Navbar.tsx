@@ -6,16 +6,13 @@ import "flag-icons/css/flag-icons.min.css";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
-  // Scroll to top when navigating to Gallery
   const handleGalleryClick = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-    // No need to prevent default, navigation will happen
   };
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Language data with flag-icons class and code
   const languages = [
     { code: "et", flag: "ee" },
     { code: "en", flag: "gb" },
@@ -44,7 +41,6 @@ const Navbar = () => {
     <header className="border-b border-border py-4 bg-background">
       <div className="container-custom">
         <div className="relative flex items-center w-full h-16">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-lg font-medium tracking-tight">
               <div>
@@ -59,7 +55,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Centered Nav */}
           <nav className="container-custom absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center space-x-8">
             <Link
               to="/"
