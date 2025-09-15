@@ -16,7 +16,7 @@ const resources = {
       aboutDescription:
         "Askordoors OÜ valmistab ja paigaldab kõrgekvaliteedilisi eritellimusel uksi. Meie tooted valmivad parimatest saadaolevatest materjalidest ning kogenud meistrite käe all.",
       artistPlatform:
-        "<strong>Pakume laia valikut uksi</strong>: maja välisuksed, korteri välisuksed, kortermajade välisuksed, laiendiga välisuksed, muinsuskaitse uksed, välisuksed miljööväärtuslikule hoonele, kahepoolsed paarisuksed ning palju muud.",
+        "<h2 class='text-base font-normal mb-4 text-center text-muted-foreground'>Pakume laia valikut uksi:</h2><ul class='list-none text-base font-normal text-center text-muted-foreground p-0 m-0'><li>maja välisuksed</li><li>korteri välisuksed</li><li>kortermajade välisuksed</li><li>laiendiga välisuksed</li><li>muinsuskaitse uksed</li><li>välisuksed miljööväärtuslikule hoonele</li><li>kahepoolsed paarisuksed</li><li>ning palju muud</li></ul>",
       uniqueMaterials:
         "Kõiki uksi valmistame vastavalt Sinu soovile – võid saata foto (nt olemasolevast uksest), internetilingi või lihtsalt kirjelduse soovitud uksetüübist. Uste disaini saab kasutada välis- ja siseustel. <strong>Tarneaeg on 3–5 nädalat pärast 50% ettemaksu tasumist</strong>.",
 
@@ -95,7 +95,7 @@ const resources = {
       aboutDescription:
         "Askordoors OÜ manufactures and installs high-quality custom-made doors. Our products are crafted from the finest materials available and by the hands of experienced craftsmen.",
       artistPlatform:
-        "<strong>We offer a wide range of doors</strong>: exterior doors for houses, exterior doors for apartments, exterior doors for apartment buildings, exterior doors with side panels, heritage conservation doors, exterior doors for buildings of historical or environmental value, double-leaf doors, and much more.",
+        "<h2 class='text-base font-normal mb-4 text-center text-muted-foreground'>We offer a wide range of doors:</h2><ul class='list-none text-base font-normal text-center text-muted-foreground p-0 m-0'><li>exterior doors for houses</li><li>exterior doors for apartments</li><li>exterior doors for apartment buildings</li><li>exterior doors with side panels</li><li>heritage conservation doors</li><li>exterior doors for buildings of historical or environmental value</li><li>double-leaf doors</li><li>and much more</li></ul>",
       uniqueMaterials:
         "All doors are made according to your wishes – you can send us a photo (e.g., of an existing door), a link from the internet, or simply a description of the desired door type. The design of doors can be used for exterior and interior doors. <strong>Delivery time is 3–5 weeks after a 50% prepayment</strong>.",
 
@@ -175,7 +175,7 @@ const resources = {
       aboutDescription:
         "Askordoors OÜ valmistaa ja asentaa korkealaatuisia mittatilausovia. Tuotteemme valmistetaan parhaista saatavilla olevista materiaaleista kokeneiden mestareiden käsissä.",
       artistPlatform:
-        "<strong>Tarjoamme laajan valikoiman ovia</strong>: omakotitalon ulko-ovet, kerrostalon ulko-ovet, asuinkerrostalojen ulko-ovet, laajennetut ulko-ovet, suojellun rakennuksen ovet (räätälöidyt ovet, rakennusperintölailla suojellut ovet), ovet rakennuksiin, joilla on kulttuurihistoriallista arvoa, kaksiosaiset pariovet ja paljon muuta.",
+        "<h2 class='text-base font-normal mb-4 text-center text-muted-foreground'>Tarjoamme laajan valikoiman ovia:</h2><ul class='list-none text-base font-normal text-center text-muted-foreground p-0 m-0'><li>omakotitalon ulko-ovet</li><li>kerrostalon ulko-ovet</li><li>asuinkerrostalojen ulko-ovet</li><li>laajennetut ulko-ovet</li><li>suojellun rakennuksen ovet</li><li>ovet rakennuksiin, joilla on kulttuurihistoriallista arvoa</li><li>kaksiosaiset pariovet</li><li>ja paljon muuta</li></ul>",
       uniqueMaterials:
         "Kaikki ovet valmistetaan toiveidesi mukaan – voit lähettää valokuvan (esim. vanhasta ovesta), linkin internetistä tai yksinkertaisesti kuvauksen haluamastasi ovimallista. Ovien suunnittelua voidaan käyttää ulko- ja sisäovissa. <strong>Toimitusaika on 3–5 viikkoa 50 % ennakkomaksun jälkeen</strong>.",
 
